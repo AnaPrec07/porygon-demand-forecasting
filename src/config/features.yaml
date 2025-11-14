@@ -1,0 +1,12 @@
+# Feature list for model training
+features:
+- "fea_num_transactions_lag_1"
+- "fea_num_transactions_lag_7"
+- "fea_num_transactions_lag_14"
+- "fea_num_transactions_lag_30"
+- "fea_num_transactions_rolling_mean_7"
+- "fea_num_transactions_rolling_std_7"
+- "fea_num_transactions_rolling_mean_14"
+- "fea_num_transactions_rolling_std_14"
+- "fea_num_transactions_rolling_mean_30"
+- "fea_num_transactions_rolling_std_30"

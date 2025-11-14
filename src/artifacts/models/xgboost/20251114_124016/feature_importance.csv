@@ -1,0 +1,10 @@
+feature,importance
+fea_num_transactions_rolling_mean_7,421.0
+fea_num_transactions_rolling_mean_14,415.0
+fea_num_transactions_rolling_std_7,338.0
+fea_num_transactions_rolling_std_14,331.0
+fea_num_transactions_lag_1,232.0
+fea_num_transactions_lag_7,151.0
+fea_num_transactions_rolling_std_30,96.0
+fea_num_transactions_rolling_mean_30,59.0
+fea_num_transactions_lag_14,28.0
