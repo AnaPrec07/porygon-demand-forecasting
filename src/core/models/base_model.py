@@ -74,6 +74,8 @@ class BaseTrainer():
         self.X_val = X_val
         self.y_val = y_val
 
+        print(f"this is prior to training: {X_train.columns}")
+
         logger.info(f"Training {self.model_name} model...")
         # todo: here I want to print all the training configurations in the config file.
 
@@ -94,15 +96,17 @@ class BaseTrainer():
             eval_set=eval_set,
             verbose=True
         )
+        
+        print(f"this is after training: {X_train.columns}")
 
         # Store training history
-        self.training_history = {
-            'best_iteration': self.model.best_iteration,
-            'best_score': self.model.best_score,
-        }
-
-        logger.info(f"Training completed. Best iteration: {self.model.best_iteration}")
-        logger.info(f"Best score: {self.model.best_score:.4f}")
+        #self.training_history = {
+        #    'best_iteration': self.model.best_iteration,
+        #    'best_score': self.model.best_score,
+        #}
+#
+        #logger.info(f"Training completed. Best iteration: {self.model.best_iteration}")
+        #logger.info(f"Best score: {self.model.best_score:.4f}")
 
         # Save model
         self._save_model()
@@ -153,6 +157,7 @@ class BaseTrainer():
         )
 
         predictions_df = pd.DataFrame({
+            
             'actual': self.y_val.values,
             'predicted': self.pred_val.values,
             'residual': self.y_val.values - self.pred_val.values,
@@ -288,7 +293,6 @@ class BaseTrainer():
 
         importance_dict = self.model.get_booster().get_score(importance_type='weight')
 
-        
         self.feature_importance = pd.DataFrame([
             {'feature': k, 'importance': v}
             for k, v in importance_dict.items()

@@ -1,15 +1,16 @@
 # Google Cloud Platform Configuration
 gcp:
   project_id: "porygon-pipelines"
-  dataset_id: "thelook_featurestore"
+  dataset_id: "m5_intermediate"
   region: "us-east4"
 
 # Training Configurations
 training:
-  training_table_name: main_demand_table
-  target_col: "num_transactions"
+  training_table_name: "training_table_v4"
+  target_col: "tgt_total_sales"
   date_column: "date"
-  id_column: "product_id"
+  id_column: "obs_id"
+  train_val_split_date: "2015-04-01"
   # Load features from external file
   features_file: "features.yaml"
 
@@ -26,5 +27,6 @@ models:
       gamma: 0
       reg_alpha: 0
       reg_lambda: 1
+      # objective: "reg:absoluteerror"
       early_stopping_rounds: 20
       random_state: 42

@@ -1,0 +1,17 @@
+feature,importance
+fea_sales_roll_6,627.0
+fea_sales_roll_12,360.0
+fea_month_sin,242.0
+fea_store_id_encoded,216.0
+fea_is_national_event,168.0
+fea_is_event_1,135.0
+fea_is_religious_event,102.0
+fea_is_weekend,97.0
+fea_state_id_encoded,87.0
+fea_cat_id_encoded,71.0
+fea_is_cultural_event,70.0
+fea_dept_id_encoded,63.0
+fea_is_sporting_event,54.0
+fea_is_event_2,32.0
+fea_is_snap_ca,2.0
+fea_is_snap_tx,1.0

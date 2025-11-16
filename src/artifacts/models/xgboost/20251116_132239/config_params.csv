@@ -1,10 +1,11 @@
 parameter,value,source
 project_id,porygon-pipelines,gcp
-dataset_id,thelook_featurestore,gcp
+dataset_id,m5_intermediate,gcp
 region,us-east4,gcp
-training_table_name,main_demand_table,training
-target_col,num_transactions,training
+training_table_name,training_table_mvp,training
+target_col,tgt_total_sales,training
 date_column,date,training
-id_column,product_id,training
+id_column,obs_id,training
+train_val_split_date,2015-04-01,training
 features_file,features.yaml,training
 params,"{'xgboost': {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1, 'min_child_weight': 1, 'subsample': 0.8, 'colsample_bytree': 0.8, 'gamma': 0, 'reg_alpha': 0, 'reg_lambda': 1, 'early_stopping_rounds': 20, 'random_state': 42}}",models
