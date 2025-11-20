@@ -11,6 +11,11 @@ from src.core.models.base_model import BaseTrainer
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+FILTER_POTENTIAL_STOCKOUT = True
+STOCKOUT_DAYS_THRESHOLD = 20
+
+FILTER_OUTLIERS = True
+
 def main():
     """Main function for XGBoost training."""
 
@@ -37,6 +42,16 @@ def main():
         table_name=config_loader.training_table_name,
         fields=fields
     )
+    loaded_df = loaded_df[~loaded_df[config_loader.target_col].isna()]
+
+    if FILTER_POTENTIAL_STOCKOUT:
+        logger.info(f"Filtering potential stockout rows with more than {STOCKOUT_DAYS_THRESHOLD} days of zero sales...")
+        loaded_df = loaded_df[loaded_df['tgt_days_is_zero_sales_lead_1_months'] < STOCKOUT_DAYS_THRESHOLD]
+
+    if FILTER_OUTLIERS:
+        logger.info(f"Filtering outliers ...")
+        loaded_df = loaded_df[loaded_df[config_loader.target_col] < 427]
+
 
     # Split train val.
     training_df = loaded_df[loaded_df[config_loader.date_column] < pd.to_datetime(config_loader.train_val_split_date)]
