@@ -46,7 +46,7 @@ def main():
 
     if FILTER_POTENTIAL_STOCKOUT:
         logger.info(f"Filtering potential stockout rows with more than {STOCKOUT_DAYS_THRESHOLD} days of zero sales...")
-        loaded_df = loaded_df[loaded_df['tgt_days_is_zero_sales_lead_1_months'] < STOCKOUT_DAYS_THRESHOLD]
+        loaded_df = loaded_df[loaded_df[config_loader.potential_stockout_col] < STOCKOUT_DAYS_THRESHOLD]
 
     if FILTER_OUTLIERS:
         logger.info(f"Filtering outliers ...")
