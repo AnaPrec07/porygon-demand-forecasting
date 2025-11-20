@@ -39,7 +39,7 @@ class ConfigLoader:
         # set feautures yaml configurations.
         self.features_list = self.features_yaml.get("features", [])
         # Set training fields.
-        self.training_fields = self.features_list + [self.target_col, self.date_column, self.id_column]
+        self.training_fields = self.features_list + [self.target_col, self.date_column, self.potential_stockout_col] + self.id_columns
     
     def get_sa_credentials(self):
         """Get service account credentials from json file."""

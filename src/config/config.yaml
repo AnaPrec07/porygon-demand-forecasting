@@ -1,15 +1,16 @@
 # Google Cloud Platform Configuration
 gcp:
   project_id: "porygon-pipelines"
-  dataset_id: "m5_intermediate"
+  dataset_id: "walmart_training_tables"
   region: "us-east4"
 
 # Training Configurations
 training:
-  training_table_name: "training_table_v4"
-  target_col: "tgt_total_sales"
-  date_column: "date"
-  id_column: "obs_id"
+  training_table_name: "training_table_v3"
+  target_col: "tgt_monthly_sales_lead_1_months"
+  potential_stockout_col: "tgt_days_is_zero_sales_lead_1_months"
+  date_column: "ctx_date_month"
+  id_columns: ["ctx_state_id", "ctx_store_id", "ctx_cat_id", "ctx_dept_id", "ctx_item_id"]
   train_val_split_date: "2015-04-01"
   # Load features from external file
   features_file: "features.yaml"
@@ -18,7 +19,7 @@ training:
 models:
   params: 
     xgboost:
-      n_estimators: 200
+      n_estimators: 100
       max_depth: 6
       learning_rate: 0.1
       min_child_weight: 1
@@ -27,6 +28,9 @@ models:
       gamma: 0
       reg_alpha: 0
       reg_lambda: 1
-      # objective: "reg:absoluteerror"
+      booster: "gbtree"
+      tree_method: "hist"
+      grow_policy: "lossguide"
+      objective: "reg:squarederror"
       early_stopping_rounds: 20
       random_state: 42
