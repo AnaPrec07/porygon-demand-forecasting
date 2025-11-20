@@ -77,7 +77,6 @@ class BaseTrainer():
         print(f"this is prior to training: {X_train.columns}")
 
         logger.info(f"Training {self.model_name} model...")
-        # todo: here I want to print all the training configurations in the config file.
 
         # Initialize model
         self.model = self.model(
@@ -98,15 +97,6 @@ class BaseTrainer():
         )
         
         print(f"this is after training: {X_train.columns}")
-
-        # Store training history
-        #self.training_history = {
-        #    'best_iteration': self.model.best_iteration,
-        #    'best_score': self.model.best_score,
-        #}
-#
-        #logger.info(f"Training completed. Best iteration: {self.model.best_iteration}")
-        #logger.info(f"Best score: {self.model.best_score:.4f}")
 
         # Save model
         self._save_model()
