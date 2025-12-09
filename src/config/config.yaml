@@ -6,12 +6,12 @@ gcp:
 
 # Training Configurations
 training:
-  training_table_name: "training_table_v3"
-  target_col: "tgt_monthly_sales_lead_1_months"
+  training_table_name: "master_table_ca2_itfeas"
+  target_col: "tgt_monthly_sales_sum_3_next_months"
   potential_stockout_col: "tgt_days_is_zero_sales_lead_1_months"
   date_column: "ctx_date_month"
   id_columns: ["ctx_state_id", "ctx_store_id", "ctx_cat_id", "ctx_dept_id", "ctx_item_id"]
-  train_val_split_date: "2015-04-01"
+  train_val_split_date: "2015-01-01"
   # Load features from external file
   features_file: "features.yaml"
 
@@ -20,17 +20,9 @@ models:
   params: 
     xgboost:
       n_estimators: 100
-      max_depth: 6
-      learning_rate: 0.1
-      min_child_weight: 1
-      subsample: 0.8
-      colsample_bytree: 0.8
-      gamma: 0
-      reg_alpha: 0
-      reg_lambda: 1
       booster: "gbtree"
       tree_method: "hist"
       grow_policy: "lossguide"
-      objective: "reg:squarederror"
+      objective: "count:poisson"
       early_stopping_rounds: 20
       random_state: 42
