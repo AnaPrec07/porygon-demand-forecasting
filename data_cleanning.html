@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="End-to-end demand forecasting and inventory optimization solution using machine learning. This portfolio project shows how walmart can achieve better inventory turnover, innventory days outstanding and reduce costs by leveraging the LightGBM algorithm to forecast demand.">
+    <meta name="author" content="Ana Preciado">
+    <meta name="keywords" content="machine learning, demand forecasting, inventory optimization, LightGBM, supply chain, retail analytics">
+    
+    <title>Demand Forecasting & Inventory Optimization | Ana Preciado</title>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Demand Forecasting & Inventory Optimization">
+    <meta property="og:description" content="ML-powered retail demand forecasting with 15-25% accuracy improvement and 10-20% cost reduction">
+    <meta property="og:url" content="https://anaprec07.github.io/porygon-demand-forecasting/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #4285F4;
+            --secondary-color: #34A853;
+            --accent-color: #FBBC04;
+            --danger-color: #EA4335;
+            --dark: #1a1a1a;
+            --dark-secondary: #2d2d2d;
+            --light: #f8f9fa;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header/Hero Section */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--light);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 20px;
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .tech-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .tech-item .name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Results Section */
+        .results {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .comparison-table {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .comparison-table thead {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .comparison-table tbody tr:nth-child(even) {
+            background: var(--light);
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #e3f2fd;
+        }
+
+        .improvement {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 1px 1px 8px #666;
+            background: #fff;
+            background: #fcfff4;
+            min-height: 600px;
+            max-width: 1400px;
+            padding: 64px 60px;
+            margin: 0 auto;
+            @include transform(translateZ(0));
+            @include transition(all 500ms ease-out);
+
+            .inner {
+                @include transform(translateZ(0));
+                @include transition(all 800ms cubic-bezier(0.77, 0, 0.175, 1));
+                min-height: 600px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--dark-secondary);
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stats-grid,
+            .features-grid,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px 10px;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">📊 Demand Forecasting</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="data_cleanning.html", class="active">Data Processing</a></li>
+                <li><a href="https://sites.google.com/view/ana-preciado/home">About</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <!-- Data Analysis Section -->
+    <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Data Processing Executive Summary</h2>
+            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                The <strong>CA_1</strong> store has sold 2,987 distinct SKUs over the course of Jan 2011 to Dec 2014, which is the Machine Learning training period.
+            </p>
+        </div>
+
+    <!-- Observations per Category and Filter Table -->
+        <h3 style="text-align:center; margin-bottom: 20px;">Observations per Category and Filter</h3>
+    <div style="overflow-x:auto;">
+    <table style="max-width:900px; margin:20px auto; border-collapse:collapse; width:100%; font-family:Arial, sans-serif; background:white; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+    <thead style="background:#004aad; color:white; text-transform:uppercase; font-size:15px;">
+        <tr>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Category</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Total Observations (Raw)</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">% of Raw Total</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">After 12+ Sales History</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">After Stockout Filter</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">% of Final Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr style="background:#f8f9fc;">
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">Food</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">68,976</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">40.7%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">33,823</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">26,174</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">40.1%</td>
+        </tr>
+
+        <tr>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">Household</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">50,256</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">29.7%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">24,266</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">19,027</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">29.2%</td>
+        </tr>
+
+        <tr style="background:#f8f9fc;">
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">Hobbies</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">27,120</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">16.0%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">13,038</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">10,602</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">16.3%</td>
+        </tr>
+    </tbody>
+
+    <tfoot style="background:#fafafa; font-weight:bold;">
+        <tr>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Total</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">146,352</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">100%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">71,127</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">55,803</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">100%</td>
+        </tr>
+    </tfoot>
+</table>
+
+        </div>
+        <p style="text-align:center; color:var(--text-secondary); margin-top:10px;">From 145,803 observations, the final dataset is only 55, 803. This is 38.3% of the original data.</p>
+    </section>
+    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
+        <div class="container">
+            <h3 class="section-title">Step 1: Keep Only Items with 12 Months Historical Sales Data</h3>
+            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                The top features in the machine learning solution is the number of historical sales each item had. Among the top three we can find the average monthly sales for each item in
+                the last 12 month. As a result, this solution focuses in items with at least 1 year of sales data history.
+                Walmart introduces items continuously throughout 2011-2016. From the 2,987 SKUs, only 2,613 had at least 12 months of historical sales data by the end of 2014 (training period).
+                While this leads to some items being over represented in the training sample over others, the model benefits from training with all the available data. In this case, more data leads
+                to better predictions.
+            </p>
+        </div>
+    </section>
+    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
+        <div class="container">
+            <h3 class="section-title">Step 2: Treat Pareto Sales Distribution</h3>
+            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                I calculated the median sales per item over the period from Jan 2011 to Dec 2014 for all items that had at least one year of sales data history. The distribution is log-normal (pareto distributed). 
+                While the items at the 99th percentile have on average around 30x the median sales as items in the 50th percentile, I abstain from filtering these items (as well as outliers) 
+                by implementing instead a log normal transformation to the target. 
+            </p>
+        </div>
+    </section>
+    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
+        <div class="container">
+            <h3 class="section-title">Step 3: Remove Stockout Data</h3>
+            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                The original dataset provided by walmart contains information on daily sales. In this project, I am predicting total sales for the next three months. I googled information on stockouts per department
+                and food items are often restocked every week. Hobbies and household items might be restocked more frequently. Using daily data and statistics per department, I was abel to 
+                come up with thresholds that would indicate when an item had a stockout or an inventory complication. Household 1: 6 days, foods 3: 5 days. Foods 1: 6 days. Foods 2: 7 days. Household 2: 14 days. Hobbies 2: 28 days. Hobbies 1: 9 days.
+
+                While I did use this to better understand the error of the model, I did not filter for them because it would reduce the data I had available too much. While the thresholds are at the 97th percentile, 
+                the topic is still too noisy. I consider a stockout to be any month where total item sales were 0. 
+                Filters I did do:
+                1. Since I am predicting for sales on the next three months, I filtered for instances where monthly sales for all of the next three months were more than 0. 
+                2. Remove all months with more than 20 days without sales because this should be by iteself a stockout indicator. 
+                3. Remove all instances when the current sales of the day had more than 20 days of zero sales. 
+                What I did do is 
+            </p>
+        </div>
+    </section>
+</body>
+</html>
