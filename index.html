@@ -502,6 +502,7 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="data_cleanning.html">Data Processing</a></li>
+                <li><a href="model_explainability.html">Model Explainability</a></li>
                 <li><a href="https://sites.google.com/view/ana-preciado/home">About</a></li>
             </ul>
         </nav>
@@ -512,13 +513,13 @@
         <div class="container">
             <h1>ML-Driven Demand<br>Forecasting Solution</h1>
             <p class="tagline">
-                This portfolio project demonstrates how to develop and deploy an XGBoost solution to forecast retail sales across multiple product categories using real Walmart data from the M5 case competition.
+                This portfolio project demonstrates how to develop and deploy an XGBoost solution to forecast retail sales across multiple product categories using real Walmart data.
             </p>
             
             <div class="badges">
-                <span class="badge">BigQuery</span>
+                <span class="badge">Google Cloud</span>
                 <span class="badge">Demand Forecasting</span>
-                <span class="badge">MLOps</span>
+                <span class="badge">Machine Learning</span>
             </div>
 
             <div class="cta-buttons">
@@ -539,32 +540,36 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-value">placeholde%</div>
-                    <div class="stat-label">Forecast Accuracy Improvement</div>
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">Forecast Error Reduction (from 23% MdAPE to 16%)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">placeholde%</div>
-                    <div class="stat-label">Cost Reduction</div>
+                    <div class="stat-value">$21,421</div>
+                    <div class="stat-label">Net Profit Increase in 6 Months</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">placeholde%+</div>
-                    <div class="stat-label">Service Level Maintained</div>
+                    <div class="stat-value">97%</div>
+                    <div class="stat-label">Fill Rate Maintained in 6 months</div>
                 </div>
+
                 <div class="stat-card">
-                    <div class="stat-value">placeholderx</div>
-                    <div class="stat-label">Expected ROI (Year 1)</div>
+                    <div class="stat-value">31%</div>
+                    <div class="stat-label">Reduction on stockout units</div>
                 </div>
             </div>
         </div>
     </section>
-
+    <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 1px;">
+            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 5px;margin-top: 25px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+            <strong>Note:</strong> The numbers above have portfolio illustrative purposes only and do <u>not</u> represent real financial or operational results.</p>
+    </section>
     <!-- Data Analysis Section -->
     <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
         <div class="container">
             <h2 class="section-title">Data Composition Overview</h2>
             <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                    Although the Walmart M5 dataset includes data for 10 stores, this solution focuses on the store labeled CA_1 to simplify the demonstration. The project built in this portfolio is designed to scale easily to all 10 stores if needed.
-                    This project assumes that we are standing on December 2014, and we would like to start implementing the demand forecasting solution built to forecast demanand for the year of 2105.
+                This use case leverages the Walmart datasets provided as part of the M5 Forecasting Accuracy competition. 
+                The data contains sales history for 3,049 SKUs spanning January 2011 through April 2016. You can access these datasets thorugh this <a href="https://www.kaggle.com/competitions/m5-forecasting-accuracy">link. </a>
             </p>
             <!-- Dataset Overview -->
             <div style="max-width: 1100px; margin: 40px auto;">
@@ -652,26 +657,19 @@
                     Solution's Objective
                 </h3>
                 <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                    Walmart aims to increase net profit by reducing stockouts and managing inventory costs more efficiently. To achieve this, it must first identify
-                    its optimal service level. The <strong>service level</strong> is the probability of meeting total monthly demand for a given item. 
-                    The optimal service level depends on Walmart's internal cost structure and is determined by the trade-off between inventory holding costs and stockout costs.
-                        <ul style="text-align: left; margin: 16px auto 0 auto; max-width: 700px; font-size: 1.07rem; line-height: 1.7; padding-left: 18px;">
-                        <li style="margin-bottom: 8px; background: #fff; border-radius: 4px; padding: 7px 10px;">
-                            <strong>Overstocking</strong> leads to higher holding costs.
-                        </li>
-                        <li style="background: #fff; border-radius: 4px; padding: 7px 10px;">
-                            <strong>Understocking</strong> leads to higher stockout costs.
-                        </li>
-                        </ul>
+                    Walmart aims to increase net profit by reducing inventory holding costs and preventing stockout events. To achieve this, walmart must define and meet its optimal service level 
+                    based on its specific cost structure. A company's <strong>service level</strong> is the probability of meeting total monthly demand for a given item. Note that service level 
+                    is different from fill rate in that fill rate measures the percentage of total units demanded that are actually supplied from stock. 
+                    Service level focuses on the likelihood of avoiding stockouts altogether.
                 </p>
-                <div style="margin: 12px auto 12px auto; max-width: 1000px; border-radius: 4px; padding: 20px; font-size: 1.04rem; text-align: center; margin-top: 30px">
+                <div style="margin: 12px auto 12px auto; max-width: 1000px; border-radius: 4px; padding: 20px; font-size: 1.04rem; text-align: center; margin-top: 30px; margin-bottom: 40px;">
                         <span style="font-weight: 600;">Optimal Service Level Formula:</span><br>
                         <span style="font-family: monospace; font-size: 1.09rem;">SL = Cu / (Cu + Co)</span><br>
                         <span>where <strong>Cu</strong> is the stockout cost per unit and <strong>Co</strong> is the holding cost per unit.<br>
                         Given the below parameters, Walmart's optimal service level is <strong>88%</strong></span>
                 </div>
 
-            <h4 style="font-size: 1.35rem; margin-bottom: 6px; color: #667eea; font-weight: 700; text-align: center; letter-spacing: 0.3px;">Operational Parameters</h4>
+            <h4 style="font-size: 1.35rem; margin-top: 12px; margin-bottom: 6px; color: #667eea; font-weight: 700; text-align: center; letter-spacing: 0.3px;">Operational Parameters</h4>
             <div style="max-width: 720px; margin: 0 auto 50px; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 35px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px 35px;">
                     <div style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
@@ -724,108 +722,68 @@
                             <!-- Demand Forecasting -->
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-weight: 700; color: #667eea;" rowspan="2">Demand Forecasting</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Average MAPE</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">70.62%</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">placeholder%</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Median Absolute Percent Error</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">21.42%</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">16.93%</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better - forecast accuracy</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Forecast Bias</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">-1.57 units</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder units</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Close to 0 is best</td>
+                                <td style="padding: 12px; font-size: 0.9rem;"> Median Absolute Error</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">19 units</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">15 units</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better - forecast accuracy</td>
                             </tr>
                             <!-- Service Level -->
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-weight: 700; color: #43a047;" rowspan="3">Service Level</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Overall Service Level</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">85.93%</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">placeholder%</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Target: 95.0% - % of demand met</td>
+                                <td style="padding: 12px; font-weight: 700; color: #ff9800;" rowspan="3">Service Level</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Fill Rate</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">95.40%</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">97.19%</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better.</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Fill Rate</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">85.93%</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder%</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Same as service level in this context</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Units Sold</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">553,304</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">561,096</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Stockouts</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">125,888 units</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder units</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Total units not fulfilled</td>
-                            </tr>
-                            <!-- Inventory Efficiency -->
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-weight: 700; color: #ff9800;" rowspan="4">Inventory Efficiency</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Avg Days on Hand</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">inf days</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder days</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Target: 30-45 days for food retail</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Inventory Turnover</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">infx</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholderx</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Target: 8-12x/year for good performance</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Avg Inventory Level</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">322.4 units</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder units</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Average units held in stock</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Avg Safety Stock</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">61.4 units</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder units</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Buffer inventory for uncertainty</td>
-                            </tr>
-                            <!-- Operational -->
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-weight: 700; color: #6a1b9a;" rowspan="2">Operational</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Orders Placed</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">3,219</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Number of replenishment orders</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Avg Orders per SKU</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">3.9</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">placeholder</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Order frequency per store-item</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">31,910 units</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">19,500 units</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
                             </tr>
                             <!-- Financial -->
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
                                 <td style="padding: 12px; font-weight: 700; color: #4caf50;" rowspan="5">Financial</td>
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Holding Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$532,237</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$placeholder</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$40,043</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$40,565</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Cost of carrying inventory</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Order Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$321,900</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$placeholder</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Cost of placing orders</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Stockout Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$629,442</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$placeholder</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lost revenue from stockouts</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$200,215</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$202,824</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Unit cost of carried items</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Inventory Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$1,483,579</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$placeholder</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$240,258</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$243,389</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Sum of all inventory-related costs</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Cost per Unit Sold</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$inf</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$placeholder</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Average inventory cost per unit</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Total Profit Lost due to Stockout</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$68,728</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$44,177</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Net Profit Generated</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$1,307,244</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$1,328,665</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
                             </tr>
                         </tbody>
                     </table>
@@ -929,18 +887,19 @@
                         <div style="background: #e8eaf6; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
                             <h5 style="font-size: 1rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Key Data Preparation Steps:</h5>
                             <ul style="margin: 0; padding-left: 25px; line-height: 1.8; font-size: 0.9rem; color: var(--text-primary);">
-                                <li><strong>Stockout Detection:</strong>  Identified and removed stockout periods from sales data to improve forecast accuracy. Inventory stockouts introduce artificial zeros in the sales data. These zeros don't represent true demand, leading to biassed estimates.</li>
+                                <li><strong>Stockout event detection and removal:</strong>  Identified and removed stockout events from sales data to improve forecast accuracy. Inventory stockouts introduce artificial zeros in the sales data. These zeros don't represent true demand, leading to biassed estimates.</li>
                                     <ul style="margin: 0; padding-left: 25px; line-height: 1.8; font-size: 0.9rem; color: var(--text-primary);">
-                                    <li><strong>Step 1: </strong>Defined a stockout event as an SKU having <strong>20 consecutive days or more</strong> without sales.</li>
-                                    <li><strong>Step 2: </strong>Idetified and removed ~400 SKUs with monthly sales that were too intermittent to predit. Their median consecutive days without sales was 20 days or more.</li>
-                                    <li><strong>Step 3: </strong>Trained the model excluding SKU stockout events.</li>
+                                    <li><strong>Step 1: </strong>Defined a stockout event as an SKU reaching <strong>20 or more consecutive days</strong> without sales.</li>
+                                    <li><strong>Step 2: </strong>Idetified and removed ~400 SKUs with a significantly higher number of stockout events than the rest of the items.</li>
                                 </ul>
-                                <li><strong>Outlier Treatment:</strong> Transformed next 3-months sum of sales for each SKU-Store to a log-normal distribution to enable the model to handle outlier sales.</li>
+                                <li><strong>Focus on SKUs with at least three months of historical data:</strong> Removed observations where the SKU in scope didn't have at least three months of historical data. This helped the model perform better.</li>
+                                <li><strong>Filter outlier sales:</strong> Removed observations where the SKU in scope had sales values that were statistical outliers (above the 95th percentile).</li>
+                                <li><strong>Apply Log-Normal transformation to the sales distribution:</strong> The distribution of Walmart sales had a pareto shape. I trasnformed it to log-normal to enable the XGBoost algorithm used to perform better.</li>
                             </ul>
                         </div>
 
                         <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin: 0; font-style: italic;">
-                            By removing stockout data, the model learns to forecast actual demand patterns rather than inventory constraints, leading to more accurate predictions for inventory planning. To learn more about the data processing applied, visit the <a href="data_cleanning.html">data processgin</a> section.
+                            To learn more about the data processing applied, visit the <a href="data_cleanning.html">data processgin</a> section.
                         </a>
                         </p>
                     </div>
@@ -952,8 +911,8 @@
                             Feature Engineering Highlights
                         </h3>
                         <p style="font-size: 1.08rem; color: #333; margin-bottom: 28px; background: #e8eaf6; border-radius: 8px; padding: 18px 24px; box-shadow: 0 1px 4px rgba(102,126,234,0.04);">
-                            <span style="color: #667eea; font-weight: 700;">800+ features</span> were engineered to capture the full complexity of retail demand, leveraging time, price, weather, and item relationships for robust model training. 
-                            The final model uses only <span style="color: #667eea; font-weight: 700;">96</span> from all features engineered. I selected these features for their <span style="color: #667eea; font-weight: 700;">predictive power, explainability and domain relevance.</span>
+                            I engineered <span style="color: #667eea; font-weight: 700;">800+ features</span> to capture the full complexity of Walmart's retail demand. These provide the algorithm with information on price, weather, calendar events, historical sales patterns, and more. 
+                            The final model uses only <span style="color: #667eea; font-weight: 700;">96</span> features. I selected these features for their <span style="color: #667eea; font-weight: 700;">predictive power, explainability and domain relevance.</span>
                         </p>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
                             <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
@@ -1000,15 +959,14 @@
                     <div style="background: white; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea;margin-bottom: 24px;">
                         <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Training and Validating</h4>
                         <ul style="margin: 0; padding-left: 20px; line-height: 1.7; font-size: 0.85rem;">
-                            <li><strong>Target:</strong> Sum of units sold in the next 3 months per SKU-store.</li>
+                            <li><strong>Target:</strong> Sum of SKU-store units sold in the next 3 months.</li>
                             <li><strong>Models:</strong> 
                                 <ul style="margin: 0; padding-left: 25px; line-height: 1.7; font-size: 0.85rem;">
                                 <li>XGBoost with quantial error objective at the 50% percentile to predict sales per SKU-Store Sales.</li>
-                                <li>XGBoost with quantial error objective at the 90% percentile to predict SKU-Store required safety stock at the 88% service level.</li>
+                                <li>XGBoost with quantial error objective at the 80% percentile to predict SKU-Store required safety stock at the 88% service level.</li>
                                 </ul>
                             <li><strong>Training Window:</strong> From Jan 2011 to Dec 2014.</li>
                             <li><strong>Validation Window:</strong> April 2015 to Sept 2015.</li>
-                            <li><strong>Training Filters:</strong> THe solution only considers SKUs with at least 3 months of historical sales.</li>
                         </ul>
                     </div>
 
@@ -1059,7 +1017,7 @@
                         <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 20px;">
                             The main challenges I encountered in the development of this solution are: 
                             <ul style="margin: 0; padding-left: 20px; line-height: 1.7; font-size: 0.85rem; margin-bottom: 20px;">
-                                <li><strong>1. Changing demand patterns over the years: </strong>Walmart sales data from 2011 to 2015 shows significant shifts in purchasing behavior, with sales steadily declining in 2014 and 2015.
+                                <li><strong>1. Economical effect on sales:</strong>Walmart sales data from 2011 to 2015 shows significant shifts in sales amounts. Foods is the most in purchasing behavior, with sales steadily declining in 2014 and 2015.
                             To handle this specific change, I resampled the data to match the distribution observed in 2014. This helped the model reduced its bias a little but not significantly.</li>
                             </ul>
                         </p>

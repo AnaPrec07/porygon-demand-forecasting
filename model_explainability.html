@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Error Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; background: #f7f9fa; color: #222; }
+        h1, h2, h3 { color: #2a4d69; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);}
+        .section { margin-bottom: 32px; }
+        .metrics-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .metrics-table th, .metrics-table td { border: 1px solid #e0e0e0; padding: 8px; text-align: left; }
+        .metrics-table th { background: #eaf2fb; }
+        .visualization { margin: 24px 0; text-align: center; }
+        textarea { width: 100%; min-height: 120px; margin-top: 8px; font-size: 1em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Model Error Analysis</h1>
+        
+        <div class="section">
+            <h2>Summary</h2>
+            <p><!-- Write your summary here --></p>
+        </div>
+
+        <div class="section">
+            <h2>Model Training Data vs Validation</h2>
+            <p>Training Data after all the filter is 60,693 and the validation set is of 12,000. They are composed pretty much the same across categories:
+                Validation:
+                        CATEGORY       COUNT
+                        FOODS           5877
+                        HOBBI           1985
+                        HOUSE           4138
+
+                Training:
+                        CATEGORY       COUNT
+                        FOODS          29960
+                        HOBBI           9779
+                        HOUSE          20954.
+            
+            However one of the main challenges is that the lable is decreasing over time: 
+
+            </p>
+        </div>
+
+        <img src="images/evolving_3months_sale_over_time.png" alt="Feature 1 SHAP" style="max-width: 98%; min-width: 320px; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
+        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">We can see how the sum of sales decreased over time.</div>
+        
+        <img src="images/evolving_3months_sale_over_tim_per_category.png" alt="Feature 1 SHAP" style="max-width: 98%; min-width: 320px; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
+        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">We can see how the sum of sales decreased over time per category.</div>
+
+        <p>Notably, the first thing to do is to try to understand what is causing this decrease in sles. Below I have ploted the median sales against the california unemployment rate, gas prices in the US, CPI, and interest rates.
+            I didnt see any strong relationship between them that was consistent over time, except for Food CPI. Please look at the plot below. 
+
+            Similarly, gas prices seem to do a descent job at modeling the fluctuation in household items as the image below shows.
+        </p>
+
+
+        <div style="display: flex; gap: 24px; justify-content: center; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap;">
+            <div style="flex: 1 1 320px; max-width: 48%; min-width: 320px; text-align: center;">
+                <img src="images/food_cpi_vs_food.png" alt="Food CPI vs Food Sales" style="width: 100%; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
+                <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">It matches very well.</div>
+            </div>
+            <div style="flex: 1 1 320px; max-width: 48%; min-width: 320px; text-align: center;">
+                <img src="images/gas_price_vs_household_sales.png" alt="Gas Price vs Household Sales" style="width: 100%; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
+                <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">It matches very well.</div>
+            </div>
+        </div>
+
+
+        <p> The next thing I did was to make sure that the features the model was using were clean enough.
+        
+        </p>
+
+        <div class="section">
+            <h2>Error explanation</h2>
+            <p> The characteristics of the predictions the model is having the most trouble with are around 4 types:
+                1. The model does not react fast enough to changes in current sales. It looks at historical trends too much as a stabilizer. 
+        
+            </p>
+            <table class="metrics-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+
+                    <th>Interpretation</th>
+                </tr>
+                <tr>
+                    <td>MAE</td>
+                    <td><!-- Enter value --></td>
+                    <td><!-- Enter interpretation --></td>
+                </tr>
+                <tr>
+                    <td>RMSE</td>
+                    <td><!-- Enter value --></td>
+                    <td><!-- Enter interpretation --></td>
+                </tr>
+                <tr>
+                    <td>MAPE</td>
+                    <td><!-- Enter value --></td>
+                    <td><!-- Enter interpretation --></td>
+                </tr>
+                <!-- Add more metrics as needed -->
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Visualizations</h2>
+            <div class="visualization">
+                <!-- Insert error plots, residuals, or upload images here -->
+                <img src="images/error_plot.png" alt="Error Plot" style="max-width: 100%; border-radius: 8px;">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Detailed Error Analysis</h2>
+            <p><!-- Write your detailed error analysis here --></p>
+        </div>
+        
+        <div class="section">
+            <h2>Recommendations</h2>
+            <p><!-- Write your recommendations here --></p>
+        </div>
+    </div>
+</body>
+</html>

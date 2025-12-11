@@ -511,12 +511,14 @@
         <div class="container">
             <h2 class="section-title">Data Processing Executive Summary</h2>
             <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                The <strong>CA_1</strong> store has sold 2,987 distinct SKUs over the course of Jan 2011 to Dec 2014, which is the Machine Learning training period.
+                Walmart provided sales information for 3,049 unique SKUs accross 64 months (2011-2016) to a total of 1,951,360 observations. 
+                The training period (Jan 2011 to Dec 2014) is composed of 146,352 of these observations with 2,987 unique SKUs.  Below you can see the filters applied 
+                to the data to ensure quality and reliability for the demand forecasting model.
             </p>
         </div>
 
     <!-- Observations per Category and Filter Table -->
-        <h3 style="text-align:center; margin-bottom: 20px;">Observations per Category and Filter</h3>
+    <h3 style="text-align:center; margin-bottom: 20px;">Observations per Category and Filter</h3>
     <div style="overflow-x:auto;">
     <table style="max-width:900px; margin:20px auto; border-collapse:collapse; width:100%; font-family:Arial, sans-serif; background:white; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
     <thead style="background:#004aad; color:white; text-transform:uppercase; font-size:15px;">
@@ -571,48 +573,25 @@
     </tfoot>
 </table>
 
-        </div>
-        <p style="text-align:center; color:var(--text-secondary); margin-top:10px;">From 145,803 observations, the final dataset is only 55, 803. This is 38.3% of the original data.</p>
-    </section>
-    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
-        <div class="container">
-            <h3 class="section-title">Step 1: Keep Only Items with 12 Months Historical Sales Data</h3>
-            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                The top features in the machine learning solution is the number of historical sales each item had. Among the top three we can find the average monthly sales for each item in
-                the last 12 month. As a result, this solution focuses in items with at least 1 year of sales data history.
-                Walmart introduces items continuously throughout 2011-2016. From the 2,987 SKUs, only 2,613 had at least 12 months of historical sales data by the end of 2014 (training period).
-                While this leads to some items being over represented in the training sample over others, the model benefits from training with all the available data. In this case, more data leads
-                to better predictions.
-            </p>
-        </div>
-    </section>
-    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
-        <div class="container">
-            <h3 class="section-title">Step 2: Treat Pareto Sales Distribution</h3>
-            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                I calculated the median sales per item over the period from Jan 2011 to Dec 2014 for all items that had at least one year of sales data history. The distribution is log-normal (pareto distributed). 
-                While the items at the 99th percentile have on average around 30x the median sales as items in the 50th percentile, I abstain from filtering these items (as well as outliers) 
-                by implementing instead a log normal transformation to the target. 
-            </p>
-        </div>
-    </section>
-    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
-        <div class="container">
-            <h3 class="section-title">Step 3: Remove Stockout Data</h3>
-            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                The original dataset provided by walmart contains information on daily sales. In this project, I am predicting total sales for the next three months. I googled information on stockouts per department
-                and food items are often restocked every week. Hobbies and household items might be restocked more frequently. Using daily data and statistics per department, I was abel to 
-                come up with thresholds that would indicate when an item had a stockout or an inventory complication. Household 1: 6 days, foods 3: 5 days. Foods 1: 6 days. Foods 2: 7 days. Household 2: 14 days. Hobbies 2: 28 days. Hobbies 1: 9 days.
-
-                While I did use this to better understand the error of the model, I did not filter for them because it would reduce the data I had available too much. While the thresholds are at the 97th percentile, 
-                the topic is still too noisy. I consider a stockout to be any month where total item sales were 0. 
-                Filters I did do:
-                1. Since I am predicting for sales on the next three months, I filtered for instances where monthly sales for all of the next three months were more than 0. 
-                2. Remove all months with more than 20 days without sales because this should be by iteself a stockout indicator. 
-                3. Remove all instances when the current sales of the day had more than 20 days of zero sales. 
-                What I did do is 
-            </p>
-        </div>
-    </section>
+</div>
+<p style="text-align:center; color:var(--text-secondary); margin-top:10px;">From 145,803 observations, the final dataset is only 55, 803. This is 38.3% of the original data.</p>
+<div class="container" style="margin-top:80px;">
+    <h3 style="text-align:center; margin-bottom: 20px;">Applying Log-Normal Transformation to the Sales Distribution</h3>
+    <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+        The graph below shows the distribution before and after the trasnformation. 
+    </p>
+</div>
+<div style="width: 100%; display: flex; justify-content: center;">
+  <div style="max-width: 900px; width: 100%; display: flex; gap: 24px; justify-content: center; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap;">
+    <div style="flex: 1 1 320px; max-width: 48%; min-width: 320px; text-align: center;">
+        <img src="images/label_original.png" alt="Food CPI vs Food Sales" style="width: 100%; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
+        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">The original data had a pareto distribution, which is heavily skewed.</div>
+    </div>
+    <div style="flex: 1 1 320px; max-width: 48%; min-width: 320px; text-align: center;">
+        <img src="images/label_transformed.png" alt="Gas Price vs Household Sales" style="width: 100%; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
+        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">After transformation the distribution is normal, which enables the model to perform better.</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
