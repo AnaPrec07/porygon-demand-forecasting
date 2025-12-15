@@ -501,6 +501,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="data_cleanning.html", class="active">Data Processing</a></li>
+                <li><a href="model_explainability.html">Model Explainability</a></li>
                 <li><a href="https://sites.google.com/view/ana-preciado/home">About</a></li>
             </ul>
         </nav>
@@ -524,11 +525,12 @@
     <thead style="background:#004aad; color:white; text-transform:uppercase; font-size:15px;">
         <tr>
             <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Category</th>
-            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Total Observations (Raw)</th>
-            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">% of Raw Total</th>
-            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">After 12+ Sales History</th>
-            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">After Stockout Filter</th>
-            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">% of Final Total</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Raw Total Observations</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">% of Raw</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Wihtout Stockouts</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">3+ Months of Sales Data</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Without Outliers</th>
+            <th style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">% of Final</th>
         </tr>
     </thead>
 
@@ -536,28 +538,31 @@
         <tr style="background:#f8f9fc;">
             <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">Food</td>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">68,976</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">40.7%</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">33,823</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">26,174</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">40.1%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">47.1%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">52,171</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">32,564</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">26,544</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">47.1%</td>
         </tr>
 
         <tr>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">Household</td>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">50,256</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">29.7%</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">24,266</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">19,027</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">29.2%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">34.3%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">34,210</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">21,486</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">20,692</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">36.7%</td>
         </tr>
 
         <tr style="background:#f8f9fc;">
             <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">Hobbies</td>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">27,120</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">16.0%</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">13,038</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">10,602</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">16.3%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">18.5%</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">15,705</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">10,085</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">9,086</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6; text-align:center">16.1%</td>
         </tr>
     </tbody>
 
@@ -566,15 +571,16 @@
             <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">Total</td>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">146,352</td>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">100%</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">71,127</td>
-            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">55,803</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">102,086</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">64,135</td>
+            <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">56,322</td>
             <td style="padding:14px; border-bottom:1px solid #e6e6e6;text-align:center">100%</td>
         </tr>
     </tfoot>
 </table>
 
 </div>
-<p style="text-align:center; color:var(--text-secondary); margin-top:10px;">From 145,803 observations, the final dataset is only 55, 803. This is 38.3% of the original data.</p>
+<p style="text-align:center; color:var(--text-secondary); margin-top:10px;">From 145,803 observations between January 2011 and December 2014, the dataset used for training is only 56,322. <br> This is 38.86% of the 145,803.</p>
 <div class="container" style="margin-top:80px;">
     <h3 style="text-align:center; margin-bottom: 20px;">Applying Log-Normal Transformation to the Sales Distribution</h3>
     <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
