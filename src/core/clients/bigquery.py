@@ -44,3 +44,9 @@ class BigQueryClient:
         df = self._client.query(query).to_dataframe()
         logger.info(f"Loaded {len(df)} rows from table: {table_name}")
         return df
+
+    def load_from_query(self, query: str) -> pd.DataFrame:
+        """Load data from a custom SQL query into a DataFrame."""
+        df = self._client.query(query).to_dataframe()
+        logger.info(f"Loaded {len(df)} rows from custom query.")
+        return df
