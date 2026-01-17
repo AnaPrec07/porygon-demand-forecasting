@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step 1: Data Collection & Exploration | Demand Forecasting (M5)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; margin: 0; color: #222; }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(102,126,234,0.08); padding: 40px; }
+        h1, h2, h3 { color: #667eea; }
+        .section { margin-bottom: 48px; }
+        .highlight { background: #e8eaf6; border-radius: 8px; padding: 18px 24px; margin-bottom: 24px; }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fff; }
+        th, td { padding: 12px; border-bottom: 1px solid #e0e0e0; text-align: left; }
+        th { background: #667eea; color: #fff; }
+        .note { font-size: 0.98rem; color: #888; margin-top: 18px; }
+        ul { margin-left: 24px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Collection & Exploration</h1>
+        <div class="section">
+            <h2>Overview</h2>
+            <p>
+                This section describes the process of collecting and exploring the Walmart datasets available from the M5 case competition.
+        </div>
+        <div class="section">
+            <h2>Data Sources</h2>
+            <ul>
+                <li>
+                    <strong>Kaggle M5 Case Competition Datasets:</strong>Information on item sales, prices, and calendar events.<a href="placeholder.html" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">Learn more.</a>
+                </li>
+                <li>
+                    <strong>BigQuery Public Datasets:</strong>California weather data, such as temperature and precipitation.<a href="placeholder.html" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">Learn more.</a>
+                </li>
+                <li>
+                    <strong>US Bureau of Labor Statistics:</strong>Economic indicators such as gas prices, CPI, and unemployment.<a href="placeholder.html" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">Learn more.</a>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Data Collection</h2>
+            <ul>
+                <li>
+                    Ingested core <strong>sales, pricing, and calendar data</strong> from the Kaggle M5 Case Competition into BigQuery as external tables, enabling scalable and efficient querying.
+                </li>
+                <li>
+                    Identified and integrated supplementary data sources to enrich the solution:
+                    <ul>
+                        <li>
+                            Imported <strong>economic indicators</strong> (such as gas prices, CPI, and unemployment rates) from the US Bureau of Labor Statistics into BigQuery using external tables.
+                        </li>
+                        <li>
+                            Accessed <strong>weather data</strong> directly from BigQuery Public Datasets, allowing seamless integration.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+<div class="section">
+    <h2>Exploratory Data Analysis (EDA)</h2>
+    <div>
+        Used the below python notebooks to perform exploratory data analysis. Please open their links to learn more.
+        <ul>
+            <li>
+                <strong>Stockout Event Detection:</strong>
+                    <ul>
+                        <li>
+                            Learned that 63% of daily data points (3,729,880 out of 5,832,737) presented 0 sales. Aggregated to monthly sales, this figure is 27% (54,271 out of 195,136).
+                        </li>
+                        <li>
+                            Explored the distriution of consecutive days without sales per store-category-department to identify stockout thresholds per department.<a href="placeholder.html" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                        <li>
+                            Explored the SKU-level data completion. SKUs with higher data completion are over represented in the dataset, leading to biassed estimates. This analysis is after removing stockout data.<a href="placeholder.html"  target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <strong>Sales Distribution Analysis:</strong>
+                    <ul>
+                        <li>
+                            Explored the evolution of the target (sum of sales in the next three months) at multiple herarchical levels: store level, store-category level and store-category-department level.
+                        </li>
+                        <li>
+                            Explored the evolution of the target (sum of sales in the next three months) per ABC-XYZ SKU categories (across categories and departments).
+                        </li>
+                        <li>
+                            Explored the volution of the target over time. Learned it has pareto distribution and needs a log-normal transformation before training.<a href="https://cloud.google.com/bigquery/public-data" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                        <li>
+                            Performed outlier detection and analysis across hierarchical levels.<a href="placeholder.html"  target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                        <li>
+                            Explored relationship between SKU sales (SKUs that are complements or substitutes) by looking at dialy SKU sales across stores.<a href="https://cloud.google.com/bigquery/public-data" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <strong>Calendar Events Analysis:</strong>
+                    <ul>
+                        <li>
+                            Analyzed the effects of calendar events, such as seasonality on product sales. <a href="placeholder.html"  target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <strong>SKU Pricing:</strong>
+                    <ul>
+                        <li>
+                            Analyzed the distribution of SKU pricing across store-category-department. <a href="placeholder.html" target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                        <li>
+                            Analyzed the relationship between SKU pricing and SKU sales. <a href="placeholder.html"  target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <strong>California Weather Analysis:</strong> 
+                        <ul>
+                        <li>
+                            Explored the evolution of california weather over time.<a href="placeholder.html"  target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                        <li>
+                            Analyzed the impact that weather has on SKU sales.<a href="placeholder.html"  target="_blank" style="color: #667eea; text-decoration: underline; margin-left: 6px;">See Notebook.</a>
+                        </li>
+                        </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="section">
+    <h2>Key Insights</h2>
+    <ul>
+        <li>
+            <strong>Sales Intermittency:</strong> Many SKUs exhibit highly intermittent sales patterns, with frequent zero-sales periods and occasional spikes.
+        </li>
+        <li>
+            <strong>Stockouts and Holidays:</strong> Stockout events and major holidays are primary drivers of demand volatility.
+        </li>
+        <li>
+            <strong>External Drivers:</strong> Weather and economic indicators show measurable, category-specific impacts on sales, especially for food and seasonal items.
+        </li>
+        <li>
+            <strong>Feature Importance:</strong> Calendar features (holidays, SNAP), recent sales history, and price changes are among the most predictive variables.
+        </li>
+        <li>
+            <strong>Distribution:</strong> After log transformation, most SKUs’ sales distributions approximate normality, improving model performance.
+        </li>
+    </ul>
+</div>
