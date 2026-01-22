@@ -6,7 +6,7 @@ import pandas as pd
 
 from src.core.clients.bigquery import BigQueryClient
 from src.core.config_loader import ConfigLoader
-from core.models.xgboost import XgboostModel
+from src.core.models.xgboost import XgboostModel
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -29,16 +29,16 @@ def main():
     config_loader = ConfigLoader()
     model_trainer = XgboostModel()
 
-    # Set training fields to extract
-    required_fields = ",".join(config_loader.required_fields)
-
     # Set features to use
-    features = []
+    features = ["fea_is_foods", "fea_is_household", "fea_is_hobbies", "fea_dept_number"]
+
+    # Set training fields to extract
+    training_fields = ",".join(config_loader.required_fields + features)
 
     # Extract training dataframe.
-    loaded_df = bq_client.load_table(
+    loaded_df = bq_client.load_training_table(
         table_name=config_loader.training_table_name,
-        fields=required_fields+features
+        fields=training_fields
     )
 
     # Filter Outliers
@@ -57,8 +57,8 @@ def main():
         &  (loaded_df[config_loader.date_column] < pd.to_datetime(config_loader.val_end_date))
     ]
 
-    X_train, y_train = training_df[config_loader.features_list], training_df[config_loader.target_col]
-    X_val, y_val = validation_df[config_loader.features_list], validation_df[config_loader.target_col]
+    X_train, y_train = training_df[features], training_df[config_loader.target_col]
+    X_val, y_val = validation_df[features], validation_df[config_loader.target_col]
 
     
     # 01. Train model

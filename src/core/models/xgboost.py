@@ -32,6 +32,7 @@ class XgboostModel():
         """
         self.config = ConfigLoader()
         self.model_params = self.config.params.get("xgboost")
+        self.model_name = "xgboost"
         
         # Create run directory (this sets self.run_directory)
         self._get_run_directory()
@@ -83,7 +84,7 @@ class XgboostModel():
         eval_set = [(X_train, y_train)]
         if X_val is not None and y_val is not None:
             for x, y in zip(X_val, y_val):
-                eval_set.append((X_val, y_val))
+                eval_set.append((x, y))
 
         # Train model
         self.model.fit(
