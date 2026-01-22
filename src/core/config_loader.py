@@ -17,10 +17,6 @@ class ConfigLoader:
     def _load_config_yaml(self):
         with open(os.path.join(self.config_directory_path, "config.yaml"), "r") as f:
             self.config_yaml = yaml.safe_load(f)
-    
-    def _load_features_yaml(self):
-        with open(os.path.join(self.config_directory_path, self.features_file), "r") as f:
-            self.features_yaml = yaml.safe_load(f)
 
     def set_full_config(self):
         """Set attributes on target object from config key.
@@ -30,16 +26,14 @@ class ConfigLoader:
         """
         # load config yaml.
         self._load_config_yaml()
+        
         # set config yaml configurations.
         for _, config_dict in self.config_yaml.items():
             for attr_name, attr_value in config_dict.items():
                 setattr(self, attr_name, attr_value)
-        # load features yaml.
-        self._load_features_yaml()
-        # set feautures yaml configurations.
-        self.features_list = self.features_yaml.get("features", [])
+
         # Set training fields.
-        self.training_fields = self.features_list + [self.target_col, self.date_column, self.potential_stockout_col] + self.id_columns
+        self.required_fields = [self.target_col, self.date_column] + self.id_columns
     
     def get_sa_credentials(self):
         """Get service account credentials from json file."""
@@ -53,7 +47,7 @@ class ConfigLoader:
         )
 
 
-    def get_config_dataframe(self) -> DataFrame:
+    def extract_config_dataframe(self) -> DataFrame:
         """Get all configurations as a pandas DataFrame."""
 
         records = []
