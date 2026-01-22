@@ -6,15 +6,11 @@ import pandas as pd
 
 from src.core.clients.bigquery import BigQueryClient
 from src.core.config_loader import ConfigLoader
-from src.core.models.base_model import BaseTrainer
+from core.models.xgboost import BaseTrainer
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-FILTER_POTENTIAL_STOCKOUT = True
-STOCKOUT_DAYS_THRESHOLD = 20
-
-FILTER_OUTLIERS = True
 
 def main():
     """Main function for XGBoost training."""

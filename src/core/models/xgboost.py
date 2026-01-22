@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-class XgboostTrainer():
+class XgboostModel():
     """Abstract base class for model trainers."""
     
     def __init__(self):
