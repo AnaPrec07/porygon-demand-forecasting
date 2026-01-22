@@ -35,10 +35,15 @@ class BigQueryClient:
         )
         logger.info(f"BigQuery client initialized for project: {self.config.project_id}")
 
-    def load_table(self, table_name: str, fields: Optional[str] = "*") -> pd.DataFrame:
+    def load_training_table(self, table_name: str, fields: Optional[str] = "*") -> pd.DataFrame:
         """Load entire table into a DataFrame."""
 
-        query = f"SELECT {fields} FROM `{self.config.project_id}.{self.config.dataset_id}.{table_name}`"
+        query = f"""
+        SELECT 
+            {fields} 
+        FROM `{self.config.project_id}.{self.config.dataset_id}.{table_name}`
+        WHERE is_stockout_tgt = 0
+        """
         df = self._client.query(query).to_dataframe()
         logger.info(f"Loaded {len(df)} rows from table: {table_name}")
         return df

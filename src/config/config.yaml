@@ -10,6 +10,12 @@ training:
   target_col: "tgt_monthly_sales_sum_3_next_months"
   date_column: "ctx_date_month"
   id_columns: ["ctx_state_id", "ctx_store_id", "ctx_cat_id", "ctx_dept_id", "ctx_item_id"]
+  outlier_threshold: .95
+  training_start_date: "2011-01-01"
+  train_end_date: "2014-12-01"
+  val_start_date: "2015-04-01"
+  val_end_date: "2016-01-01"
+
 
 # Model Configuration
 models:
