@@ -7,17 +7,23 @@ from typing import Any, List, Optional
 from pathlib import Path
 import pandas as pd
 import joblib
+from src.core.transformations.transformations import apply_log_normal_transformation, split_dataset
 from src.core.config_loader import ConfigLoader
 import xgboost as xgb
 from datetime import datetime
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score, root_mean_squared_error
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+from src.core.config_loader import ConfigLoader
+import seaborn as sns
+
 
 matplotlib.use('Agg')  # Non-interactive backend
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+config_loader = ConfigLoader()
 
 
 class XgboostModel():
@@ -33,6 +39,7 @@ class XgboostModel():
         self.config = ConfigLoader()
         self.model_params = self.config.params.get("xgboost")
         self.model_name = "xgboost"
+        self.plot_residuals_paths = None
         
         # Create run directory (this sets self.run_directory)
         self._get_run_directory()
@@ -44,10 +51,8 @@ class XgboostModel():
     # Todo: Consider enablingmore than one validation sets here.
     def train(
         self,
-        X_train: pd.DataFrame,
-        y_train: pd.Series,
-        X_val: Optional[List[pd.DataFrame]] = None,
-        y_val: Optional[List[pd.Series]] = None
+        loaded_df: pd.DataFrame,
+        features: List[str]
     ) -> Any:
         """
         Train the model.
@@ -61,11 +66,17 @@ class XgboostModel():
         Returns:
             Trained model
         """
-        # Set training and eval data attibutes
-        self.X_train = X_train
-        self.y_train = y_train
-        self.X_val = X_val
-        self.y_val = y_val
+
+        # Apply log normal transformation to target
+        loaded_df = apply_log_normal_transformation(loaded_df=loaded_df)
+        loaded_df = apply_log_normal_transformation(loaded_df, target_col =config_loader.benchmark_col)
+        self.features = features
+
+        # Split train val.
+        self.training_df, self.validation_df = split_dataset(loaded_df= loaded_df)
+        self.X_train, self.y_train = self.training_df[features], self.training_df[config_loader.target_col]
+        self.X_val, self.y_val = self.validation_df[features], self.validation_df[config_loader.target_col]
+
 
         logger.info(
             """
@@ -81,15 +92,12 @@ class XgboostModel():
         )
 
         # Prepare evaluation set
-        eval_set = [(X_train, y_train)]
-        if X_val is not None and y_val is not None:
-            for x, y in zip(X_val, y_val):
-                eval_set.append((x, y))
+        eval_set = [(self.X_train, self.y_train), (self.X_val, self.y_val)]
 
         # Train model
         self.model.fit(
-            X_train,
-            y_train,
+            self.X_train,
+            self.y_train,
             eval_set=eval_set,
             verbose=True
         )
@@ -107,6 +115,12 @@ class XgboostModel():
             index=False
         )
 
+        # Plot bias variance tradeoff:
+        self._plot_bias_variance_tradeoff()
+
+        # Plot residuals:
+        # self._evaluate_residuals()
+
         logger.info(
             f"""
             =================================================
@@ -116,6 +130,107 @@ class XgboostModel():
             =================================================
             """
         )
+    
+    def _plot_bias_variance_tradeoff(self):
+
+        evals_result = self.model.evals_result()
+        learning_curve0 = evals_result['validation_0']['rmse']
+        learning_curve1 = evals_result['validation_1']['rmse']
+
+        benchmark_training = root_mean_squared_error(
+            self.training_df[config_loader.target_col], 
+            self.training_df[config_loader.benchmark_col]
+        )
+
+        benchmark_validation = root_mean_squared_error(
+            self.validation_df[config_loader.target_col], 
+            self.validation_df[config_loader.benchmark_col]
+        )
+
+        plt.figure(figsize=(10, 5))
+        plt.axhline(y=benchmark_validation, color="green", marker="o", label="validation benchmark")
+        plt.axhline(y=benchmark_training, color="gray", marker="o", label="training benchmark")
+        sns.lineplot(x=range(len(learning_curve0)), y=learning_curve0, label="train")
+        sns.lineplot(x=range(len(learning_curve1)), y=learning_curve1, label="val")
+        plt.xlabel('Iteration')
+        plt.ylabel('Root Mean Squared Error')
+        plt.title('Validation RMSE over Iterations')
+
+        plot_path = os.path.join(self.run_directory, "learning_curve.png")
+        plt.savefig(plot_path)
+        self.plot_bias_variance_tradeoff_path = plot_path
+
+    def _plot_residuals(self, actuals, predictions, benchmark, pred_residuals, bench_residuals, suffix):
+        _, axs = plt.subplots(2,2, figsize=(12,12))
+
+        # Actuals vs Predictions
+        axs[0,0].scatter(actuals, predictions, alpha = 0.5)
+        axs[0,0].set_xlabel("Actuals")
+        axs[0,0].set_ylabel("Predictions")
+        axs[0,0].set_title("Actuals vs Predictions")
+        axs[0,0].grid(True)
+
+        # Actuals vs Benchmark
+        axs[0,1].scatter(actuals, benchmark, alpha = 0.5)
+        axs[0,1].set_xlabel("Actuals")
+        axs[0,1].set_ylabel("Benchmark")
+        axs[0,1].set_title("Actuals vs Benchmark")
+        axs[0,1].grid(True)
+
+        # Residuals vs Predictions
+        axs[1,0].scatter(pred_residuals, predictions, alpha = 0.5)
+        axs[1,0].set_xlabel("Residuals")
+        axs[1,0].set_ylabel("Predictions")
+        axs[1,0].set_title("Residuals vs Predictions")
+        axs[1,0].grid(True)
+
+        # Residuals vs Benchamrk
+        axs[1,1].scatter(bench_residuals, benchmark, alpha = 0.5)
+        axs[1,1].set_xlabel("Residuals")
+        axs[1,1].set_ylabel("Benchmark")
+        axs[1,1].set_title("Residuals vs Benchmark")
+        axs[1,1].grid(True)
+
+        plt.tight_layout()
+
+        plot_path = os.path.join(self.run_directory, f"residuals_{suffix}.png")
+        plt.savefig(plot_path)
+        if not self.plot_residuals_paths:
+            self.plot_residuals_paths = [plot_path]
+        else:
+            self.plot_residuals_paths.append(plot_path)
+
+
+    def _evaluate_residuals(self):
+
+        self.val_predictions = self.predict(self.validation_df[self.features])
+        self.val_residuals = self.validation_df[config_loader.target_col] - self.val_predictions
+        self.val_bench_residuals = self.validation_df[config_loader.target_col] - self.validation_df[config_loader.benchmark_col]
+
+        self.train_predictions = self.predict(self.training_df[self.features])
+        self.train_residuals = self.training_df[config_loader.target_col] - self.training_df
+        self.train_bench_residuals = self.training_df[config_loader.target_col] - self.training_df[config_loader.benchmark_col]
+
+
+        self._plot_residuals(
+            actuals=self.validation_df[config_loader.target_col],
+            predictions=self.val_predictions,
+            benchmark=self.validation_df[config_loader.benchmark_col],
+            pred_residuals=self.val_residuals,
+            bench_residuals = self.val_bench_residuals,
+            suffix="validation"
+        )
+        
+        self._plot_residuals(
+            actuals=self.training_df[config_loader.target_col],
+            predictions=self.train_predictions,
+            benchmark=self.training_df[config_loader.benchmark_col],
+            pred_residuals=self.train_residuals,
+            bench_residuals = self.train_bench_residuals,
+            suffix="training"
+        )
+
+
 
     def predict(self, X_val: pd.DataFrame) -> pd.Series:
         """

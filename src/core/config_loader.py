@@ -33,7 +33,7 @@ class ConfigLoader:
                 setattr(self, attr_name, attr_value)
 
         # Set training fields.
-        self.required_fields = [self.target_col, self.date_column] + self.id_columns
+        self.required_fields = [self.target_col, self.date_column, self.benchmark_col] + self.id_columns
     
     def get_sa_credentials(self):
         """Get service account credentials from json file."""

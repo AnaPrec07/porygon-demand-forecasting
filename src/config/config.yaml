@@ -8,6 +8,7 @@ gcp:
 training:
   training_table_name: "walmart_master_table"
   target_col: "tgt_monthly_sales_sum_3_next_months"
+  benchmark_col: "tgt_benchmark"
   date_column: "ctx_date_month"
   id_columns: ["ctx_state_id", "ctx_store_id", "ctx_cat_id", "ctx_dept_id", "ctx_item_id"]
   outlier_threshold: .95

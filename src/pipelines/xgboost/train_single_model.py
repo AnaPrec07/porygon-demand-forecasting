@@ -44,24 +44,12 @@ def main(features=["fea_dept_number"]):
     loaded_df = loaded_df[
         loaded_df[config_loader.target_col] < loaded_df[config_loader.target_col].quantile(config_loader.outlier_threshold)
     ]
-
-    # Apply log normal transformation to target
-    loaded_df = apply_log_normal_transformation(loaded_df=loaded_df)
-
-    # Split train val.
-    training_df, validation_df = split_dataset(loaded_df= loaded_df)
-    X_train, y_train = training_df[features], training_df[config_loader.target_col]
-    X_val, y_val = validation_df[features], validation_df[config_loader.target_col]
-
-
     
     # 01. Train model
     logger.info("Training model...")
     model_trainer.train(
-        X_train,
-        y_train,
-        X_val=[X_val],
-        y_val=[y_val]
+        loaded_df,
+        features
     )
 
     return model_trainer
