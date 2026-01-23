@@ -25,6 +25,6 @@ models:
       booster: "gbtree"
       tree_method: "hist"
       grow_policy: "lossguide"
-      objective: "count:poisson"
+      objective: "reg:squarederror"
       early_stopping_rounds: 20
       random_state: 42

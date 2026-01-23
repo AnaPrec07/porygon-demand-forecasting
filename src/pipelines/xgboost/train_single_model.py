@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 
+from src.core.transformations.transformations import apply_log_normal_transformation, split_dataset
 from src.core.clients.bigquery import BigQueryClient
 from src.core.config_loader import ConfigLoader
 from src.core.models.xgboost import XgboostModel
@@ -12,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def main():
+def main(features=["fea_dept_number"]):
     """Main function for XGBoost training."""
 
     # Log Model Training
@@ -29,9 +30,6 @@ def main():
     config_loader = ConfigLoader()
     model_trainer = XgboostModel()
 
-    # Set features to use
-    features = ["fea_is_foods", "fea_is_household", "fea_is_hobbies", "fea_dept_number"]
-
     # Set training fields to extract
     training_fields = ",".join(config_loader.required_fields + features)
 
@@ -47,18 +45,14 @@ def main():
         loaded_df[config_loader.target_col] < loaded_df[config_loader.target_col].quantile(config_loader.outlier_threshold)
     ]
 
-    # Split train val.
-    training_df = loaded_df[
-        (loaded_df[config_loader.date_column] >= pd.to_datetime(config_loader.training_start_date))
-        &  (loaded_df[config_loader.date_column] < pd.to_datetime(config_loader.train_end_date))
-    ]
-    validation_df = loaded_df[
-        (loaded_df[config_loader.date_column] >= pd.to_datetime(config_loader.val_start_date))
-        &  (loaded_df[config_loader.date_column] < pd.to_datetime(config_loader.val_end_date))
-    ]
+    # Apply log normal transformation to target
+    loaded_df = apply_log_normal_transformation(loaded_df=loaded_df)
 
+    # Split train val.
+    training_df, validation_df = split_dataset(loaded_df= loaded_df)
     X_train, y_train = training_df[features], training_df[config_loader.target_col]
     X_val, y_val = validation_df[features], validation_df[config_loader.target_col]
+
 
     
     # 01. Train model
@@ -69,6 +63,8 @@ def main():
         X_val=[X_val],
         y_val=[y_val]
     )
+
+    return model_trainer
     
 
 
