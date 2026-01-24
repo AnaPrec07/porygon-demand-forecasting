@@ -105,9 +105,6 @@ class XgboostModel():
         # Save model
         self._save_model()
 
-        # Save feature importance
-        self._get_feature_importance()
-
 
         # save configurations dataframe
         self.config.extract_config_dataframe().to_csv(
@@ -120,6 +117,9 @@ class XgboostModel():
 
         # Plot residuals:
         self._evaluate_residuals()
+    
+        # Save feature importance
+        self._get_feature_importance()
 
         logger.info(
             f"""
@@ -299,6 +299,35 @@ class XgboostModel():
 
         importance_path = os.path.join(self.run_directory, 'feature_importance.csv')
         self.feature_importance.to_csv(importance_path, index=False)
+
+        # Plot importances
+        self._plot_importance()
+    
+    def _plot_importance(self) -> None:
+
+        top_importance = self.feature_importance[:4]
+        fig, axs = plt.subplots(len((top_importance["feature"].to_list())),2, figsize=(12,12))
+
+        for ax_index, feature in zip(range(len((top_importance["feature"].to_list()))), top_importance["feature"].to_list()):
+            # Feature vs Residual
+            axs[ax_index, 0].scatter(self.validation_df[feature], self.val_residuals, alpha = 0.5)
+            axs[ax_index, 0].set_xlabel(feature)
+            axs[ax_index, 0].set_ylabel("Residuals")
+            axs[ax_index, 0].set_title("fea_dept_number vs Predictions")
+            axs[ax_index, 0].grid(True)
+
+            # Feature vs Prediction
+            axs[ax_index, 1].scatter(self.validation_df[feature], self.val_predictions, alpha = 0.5)
+            axs[ax_index, 1].set_xlabel(feature)
+            axs[ax_index, 1].set_ylabel("Predictions")
+            axs[ax_index, 1].set_title("fea_dept_number vs Predictions")
+            axs[ax_index, 1].grid(True)
+            plt.tight_layout()
+
+            plot_path = os.path.join(self.run_directory, f"feature_importance_residuals.png")
+            plt.savefig(plot_path)
+            #if not self.plot_residuals_paths:
+            self._plot_importance_path = plot_path
     
 
         
