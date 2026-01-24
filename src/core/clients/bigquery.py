@@ -43,6 +43,7 @@ class BigQueryClient:
             {fields} 
         FROM `{self.config.project_id}.{self.config.dataset_id}.{table_name}`
         WHERE is_stockout_tgt = 0
+        AND fea_item_longevity_months >= 0
         """
         df = self._client.query(query).to_dataframe()
         logger.info(f"Loaded {len(df)} rows from table: {table_name}")
