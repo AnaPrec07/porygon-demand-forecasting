@@ -119,7 +119,7 @@ class XgboostModel():
         self._plot_bias_variance_tradeoff()
 
         # Plot residuals:
-        # self._evaluate_residuals()
+        self._evaluate_residuals()
 
         logger.info(
             f"""
@@ -195,10 +195,10 @@ class XgboostModel():
 
         plot_path = os.path.join(self.run_directory, f"residuals_{suffix}.png")
         plt.savefig(plot_path)
-        if not self.plot_residuals_paths:
-            self.plot_residuals_paths = [plot_path]
-        else:
-            self.plot_residuals_paths.append(plot_path)
+        #if not self.plot_residuals_paths:
+        self.plot_residuals_paths = plot_path
+        #else:
+            #self.plot_residuals_paths.append(plot_path)
 
 
     def _evaluate_residuals(self):
@@ -207,9 +207,9 @@ class XgboostModel():
         self.val_residuals = self.validation_df[config_loader.target_col] - self.val_predictions
         self.val_bench_residuals = self.validation_df[config_loader.target_col] - self.validation_df[config_loader.benchmark_col]
 
-        self.train_predictions = self.predict(self.training_df[self.features])
-        self.train_residuals = self.training_df[config_loader.target_col] - self.training_df
-        self.train_bench_residuals = self.training_df[config_loader.target_col] - self.training_df[config_loader.benchmark_col]
+        # self.train_predictions = self.predict(self.training_df[self.features])
+        # self.train_residuals = self.training_df[config_loader.target_col] - self.training_df
+        # self.train_bench_residuals = self.training_df[config_loader.target_col] - self.training_df[config_loader.benchmark_col]
 
 
         self._plot_residuals(
@@ -221,14 +221,14 @@ class XgboostModel():
             suffix="validation"
         )
         
-        self._plot_residuals(
-            actuals=self.training_df[config_loader.target_col],
-            predictions=self.train_predictions,
-            benchmark=self.training_df[config_loader.benchmark_col],
-            pred_residuals=self.train_residuals,
-            bench_residuals = self.train_bench_residuals,
-            suffix="training"
-        )
+        #self._plot_residuals(
+        #    actuals=self.training_df[config_loader.target_col],
+        #    predictions=self.train_predictions,
+        #    benchmark=self.training_df[config_loader.benchmark_col],
+        #    pred_residuals=self.train_residuals,
+        #    bench_residuals = self.train_bench_residuals,
+        #    suffix="training"
+        #)
 
 
 
