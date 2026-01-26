@@ -17,6 +17,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 from src.core.config_loader import ConfigLoader
 import seaborn as sns
+import pickle
 
 
 matplotlib.use('Agg')  # Non-interactive backend
@@ -203,7 +204,7 @@ class XgboostModel():
 
     def _evaluate_residuals(self):
 
-        self.val_predictions = self.predict(self.validation_df[self.features])
+        self.val_predictions = self.predict(self.validation_df[self.features], exp_transformation=False)
         self.val_residuals = self.validation_df[config_loader.target_col] - self.val_predictions
         self.val_bench_residuals = self.validation_df[config_loader.target_col] - self.validation_df[config_loader.benchmark_col]
 
@@ -232,7 +233,7 @@ class XgboostModel():
 
 
 
-    def predict(self, X_val: pd.DataFrame) -> pd.Series:
+    def predict(self, X_val: pd.DataFrame, exp_transformation = True) -> pd.Series:
         """
         Make predictions using trained model.
         
@@ -243,6 +244,8 @@ class XgboostModel():
             Predictions
         """
         predictions = self.model.predict(X_val)
+        if exp_transformation:
+            predictions = np.expm1(predictions)
         return pd.Series(predictions, index=X_val.index)
 
     def _get_run_directory(self) -> str:
@@ -259,9 +262,10 @@ class XgboostModel():
         Args:
             model_path: Path to save model
         """
-        model_path = os.path.join(self.run_directory, f"model_{model_index}.joblib")
+        model_path = os.path.join(self.run_directory, f"model_{model_index}.pickle")
         try:
-            joblib.dump(self.model, model_path)
+            with open(model_path, "wb") as f:
+                pickle.dump(self, f)
             logger.info(f"Model saved to {model_path}")
         except Exception as e:
             logger.error(f"Error saving model: {str(e)}")
@@ -276,8 +280,9 @@ class XgboostModel():
             model_path: Path to model file
         """
         try:
-            self.model = joblib.load(model_path)
-            logger.info(f"Model loaded from {model_path}")
+            with open(model_path, "rb") as f:
+                logger.info(f"Model loaded from {model_path}")
+                return pickle.load(f)
         except Exception as e:
             logger.error(f"Error loading model: {str(e)}")
             raise
