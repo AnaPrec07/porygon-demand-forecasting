@@ -11,7 +11,7 @@ from src.core.transformations.transformations import apply_log_normal_transforma
 from src.core.config_loader import ConfigLoader
 import xgboost as xgb
 from datetime import datetime
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score, root_mean_squared_error
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score, mean_pinball_loss
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
@@ -103,9 +103,6 @@ class XgboostModel():
             verbose=True
         )
 
-        # Save model
-        self._save_model()
-
 
         # save configurations dataframe
         self.config.extract_config_dataframe().to_csv(
@@ -122,6 +119,9 @@ class XgboostModel():
         # Save feature importance
         self._get_feature_importance()
 
+        # Save model
+        self._save_model()
+
         logger.info(
             f"""
             =================================================
@@ -133,17 +133,16 @@ class XgboostModel():
         )
     
     def _plot_bias_variance_tradeoff(self):
-
         evals_result = self.model.evals_result()
-        learning_curve0 = evals_result['validation_0']['rmse']
-        learning_curve1 = evals_result['validation_1']['rmse']
+        learning_curve0 = evals_result['validation_0']['quantile']
+        learning_curve1 = evals_result['validation_1']['quantile']
 
-        benchmark_training = root_mean_squared_error(
+        benchmark_training = mean_pinball_loss(
             self.training_df[config_loader.target_col], 
             self.training_df[config_loader.benchmark_col]
         )
 
-        benchmark_validation = root_mean_squared_error(
+        benchmark_validation = mean_pinball_loss(
             self.validation_df[config_loader.target_col], 
             self.validation_df[config_loader.benchmark_col]
         )
@@ -154,8 +153,8 @@ class XgboostModel():
         sns.lineplot(x=range(len(learning_curve0)), y=learning_curve0, label="train")
         sns.lineplot(x=range(len(learning_curve1)), y=learning_curve1, label="val")
         plt.xlabel('Iteration')
-        plt.ylabel('Root Mean Squared Error')
-        plt.title('Validation RMSE over Iterations')
+        plt.ylabel('Mean Pinball Loss Error')
+        plt.title('Validation Quantile Error over Iterations')
 
         plot_path = os.path.join(self.run_directory, "learning_curve.png")
         plt.savefig(plot_path)
@@ -196,10 +195,8 @@ class XgboostModel():
 
         plot_path = os.path.join(self.run_directory, f"residuals_{suffix}.png")
         plt.savefig(plot_path)
-        #if not self.plot_residuals_paths:
         self.plot_residuals_paths = plot_path
-        #else:
-            #self.plot_residuals_paths.append(plot_path)
+
 
 
     def _evaluate_residuals(self):

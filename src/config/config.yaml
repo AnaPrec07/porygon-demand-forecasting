@@ -25,7 +25,8 @@ models:
       n_estimators: 100
       booster: "gbtree"
       tree_method: "hist"
-      grow_policy: "lossguide"
-      objective: "reg:squarederror"
+      objective: "reg:quantileerror"
+      quantile_alpha: .5
       early_stopping_rounds: 20
       random_state: 42
+      
