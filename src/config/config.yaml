@@ -26,7 +26,7 @@ models:
       booster: "gbtree"
       tree_method: "hist"
       objective: "reg:quantileerror"
-      quantile_alpha: .5
+      quantile_alpha: .88
       early_stopping_rounds: 20
       random_state: 42
       
