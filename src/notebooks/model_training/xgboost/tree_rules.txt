@@ -1,0 +1,1885 @@
+|--- fea_item_num_days_item_is_zero_sales <= 21.50
+|   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.49
+|   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 4363.57
+|   |   |   |--- fea_min_dept_num_days_item_is_zero_sales <= 3.00
+|   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 74.50
+|   |   |   |   |   |--- value: [0.51]
+|   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  74.50
+|   |   |   |   |   |--- value: [0.70]
+|   |   |   |--- fea_min_dept_num_days_item_is_zero_sales >  3.00
+|   |   |   |   |--- fea_coeff_variation_dept_monthly_sales <= 1.22
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 42.00
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 5.51
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.29
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 1.12
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales <= 0.53
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.35]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales >  0.53
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 0.83
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  0.83
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  1.12
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 13.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 27.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  27.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  13.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 37.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  37.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.29
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.52
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 14.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 9.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  9.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  14.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.52
+|   |   |   |   |   |   |   |   |   |--- fea_mean_wdsp <= 5.91
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months <= 350.27
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months >  350.27
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.33]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_wdsp >  5.91
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  5.51
+|   |   |   |   |   |   |   |--- fea_item_store_price_avg <= 0.74
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 25.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.36]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  25.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.47]
+|   |   |   |   |   |   |   |--- fea_item_store_price_avg >  0.74
+|   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 16.00
+|   |   |   |   |   |   |   |   |   |--- fea_mean_gust <= 540.37
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_gust >  540.37
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  16.00
+|   |   |   |   |   |   |   |   |   |--- fea_coeffvar_cat_num_days_item_is_zero_sales <= 2.46
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_3_months <= 1578.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_3_months >  1578.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |   |--- fea_coeffvar_cat_num_days_item_is_zero_sales >  2.46
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 5.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  5.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  42.00
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 29.43
+|   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_count_12_months <= 9.00
+|   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_count_12_months >  9.00
+|   |   |   |   |   |   |   |   |--- fea_std_rain_drizzle <= 0.41
+|   |   |   |   |   |   |   |   |   |--- value: [0.49]
+|   |   |   |   |   |   |   |   |--- fea_std_rain_drizzle >  0.41
+|   |   |   |   |   |   |   |   |   |--- value: [0.37]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  29.43
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.71
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 1.58
+|   |   |   |   |   |   |   |   |   |--- fea_mean_tornado_funnel_cloud <= 0.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 17.86
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  17.86
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_tornado_funnel_cloud >  0.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.30]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  1.58
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months <= 1262.19
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months >  1262.19
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 32.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  32.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.71
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 26.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 27.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  27.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  26.00
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 2.53
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_thunder <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_thunder >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  2.53
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |--- fea_coeff_variation_dept_monthly_sales >  1.22
+|   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 6.50
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 2.44
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 1.74
+|   |   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale <= 12.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months <= 44.77
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 10.76
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  10.76
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months >  44.77
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale >  12.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 26.86
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  26.86
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.37]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  1.74
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 0.82
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 11.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  11.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 9.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  9.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  0.82
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 0.86
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  0.86
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  2.44
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 7.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 10.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.45]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  10.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 8.40
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.33]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  8.40
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.33]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  7.50
+|   |   |   |   |   |   |   |   |--- fea_item_store_price_avg <= 4.92
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months <= 29.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.49
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.17]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.49
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months >  29.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |--- fea_item_store_price_avg >  4.92
+|   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  6.50
+|   |   |   |   |   |   |--- value: [0.55]
+|   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  4363.57
+|   |   |   |--- fea_item_num_days_item_is_zero_sales <= 13.50
+|   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.64
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.64
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 30.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 29.50
+|   |   |   |   |   |   |   |   |--- fea_dept_unique_items <= 1434.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.48
+|   |   |   |   |   |   |   |   |   |   |--- fea_is_hobbies <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_is_hobbies >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.48
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 28.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  28.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_dept_unique_items >  1434.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 23.12
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  23.12
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  29.50
+|   |   |   |   |   |   |   |   |--- value: [0.48]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  30.50
+|   |   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales <= 1.40
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 1.95
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_6_months <= 95.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 2.95
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  2.95
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_6_months >  95.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 1.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  1.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  1.95
+|   |   |   |   |   |   |   |   |   |--- value: [0.48]
+|   |   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales >  1.40
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 8.60
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.41
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales <= 1.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales >  1.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.41
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  8.60
+|   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.64
+|   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.64
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 456.50
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months <= 53799.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 0.95
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.87
+|   |   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.87
+|   |   |   |   |   |   |   |   |   |--- fea_std_prcp <= 39.96
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- fea_std_prcp >  39.96
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  0.95
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_6_months <= 84.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 1.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  1.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 59.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 32
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  59.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_6_months >  84.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 2.62
+|   |   |   |   |   |   |   |   |   |   |--- fea_avg_cat_monthly_sales <= 75.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 27
+|   |   |   |   |   |   |   |   |   |   |--- fea_avg_cat_monthly_sales >  75.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 23
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  2.62
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_6_months <= 1337.34
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_6_months >  1337.34
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months >  53799.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.86
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 89.50
+|   |   |   |   |   |   |   |   |   |--- fea_mean_gust <= 565.54
+|   |   |   |   |   |   |   |   |   |   |--- fea_min_dept_monthly_sales <= 3.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |   |   |   |   |   |--- fea_min_dept_monthly_sales >  3.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_gust >  565.54
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.33]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  89.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 98.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.08
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.08
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  98.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.86
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 19.45
+|   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_num_days_item_is_zero_sales <= 7.46
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_monthly_sales <= 137.34
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_monthly_sales >  137.34
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_num_days_item_is_zero_sales >  7.46
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  19.45
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 5193.80
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  5193.80
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_3_months <= 283.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_3_months >  283.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  456.50
+|   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |--- fea_item_num_days_item_is_zero_sales >  13.50
+|   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.28
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 1.63
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months <= 4412.42
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 47.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 37.00
+|   |   |   |   |   |   |   |   |   |--- fea_mean_prcp <= 22.75
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_prcp >  22.75
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  37.00
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales <= 0.70
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales <= 1.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales >  1.85
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales >  0.70
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.47]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  47.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 34.00
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales <= 6423.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_unique_items <= 1432.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_unique_items >  1432.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales >  6423.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 53612.21
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  53612.21
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  34.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months >  4412.42
+|   |   |   |   |   |   |   |--- value: [0.62]
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  1.63
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.01
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 35.00
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 1.84
+|   |   |   |   |   |   |   |   |   |--- fea_max_temperature <= 101.65
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_6_months <= 82553.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_6_months >  82553.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |--- fea_max_temperature >  101.65
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeffvar_cat_num_days_item_is_zero_sales <= 1.56
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeffvar_cat_num_days_item_is_zero_sales >  1.56
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  1.84
+|   |   |   |   |   |   |   |   |   |--- fea_mean_temperature <= 66.11
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_temperature >  66.11
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  35.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 65.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 0.71
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 33.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  33.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  0.71
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 20.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  20.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  65.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 100.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  100.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.01
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_3_months <= 80621.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.33
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_6_months <= 58118.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_6_months <= 21619.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_6_months >  21619.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_6_months >  58118.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.33
+|   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_3_months >  80621.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.38
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 224.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_6_months <= 4550.89
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_6_months >  4550.89
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  224.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 140.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  140.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.38
+|   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.28
+|   |   |   |   |   |--- fea_coeffvar_cat_num_days_item_is_zero_sales <= 2.46
+|   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.37
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales <= 10.25
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 0.76
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 18.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 19.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  19.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.44]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  18.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.35
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.35
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  0.76
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months <= 7065.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.52]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months >  7065.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeff_variation_cat_monthly_sales <= 0.71
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeff_variation_cat_monthly_sales >  0.71
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.39]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales >  10.25
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.01
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= inf
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales <= 13.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales >  13.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  inf
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 10.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  10.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.01
+|   |   |   |   |   |   |   |   |   |--- value: [0.36]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.37
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_max <= 0.37
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_min_3_months <= 13177.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.42]
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_min_3_months >  13177.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales <= 9.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.26
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.26
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales >  9.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 3.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 29
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  3.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_max >  0.37
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months <= 81960.25
+|   |   |   |   |   |   |   |   |   |--- fea_item_days_since_last_saleq50 <= 4.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 10.32
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  10.32
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |   |--- fea_item_days_since_last_saleq50 >  4.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.33]
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months >  81960.25
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_count_12_months <= 7.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_count_12_months >  7.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |   |--- fea_coeffvar_cat_num_days_item_is_zero_sales >  2.46
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 36.00
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 10.25
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.47
+|   |   |   |   |   |   |   |   |   |--- fea_item_store_price_avg <= 9.87
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 38.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.42]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  38.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.44]
+|   |   |   |   |   |   |   |   |   |--- fea_item_store_price_avg >  9.87
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.47
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 2.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 2.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  2.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  2.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 1.93
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  1.93
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  10.25
+|   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales <= 19.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.74]
+|   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales >  19.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  36.00
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 3.57
+|   |   |   |   |   |   |   |   |--- fea_dept_price_avg <= 5.60
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 19.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  19.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_3_months <= 14930.62
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_3_months >  14930.62
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- fea_dept_price_avg >  5.60
+|   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  3.57
+|   |   |   |   |   |   |   |   |--- value: [2.37]
+|   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.49
+|   |   |--- fea_item_num_days_item_is_zero_sales <= 13.50
+|   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 4.48
+|   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 0.48
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 3.89
+|   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.41
+|   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales <= 1498.00
+|   |   |   |   |   |   |   |   |--- fea_is_cultural_event_3m <= 0.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |--- fea_is_cultural_event_3m >  0.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales >  1498.00
+|   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.41
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months <= 46.54
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 25.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 37728.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_3_months <= 20249.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_3_months >  20249.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  37728.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  25.50
+|   |   |   |   |   |   |   |   |   |--- fea_min_dewp <= -22.70
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 15.72
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  15.72
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |--- fea_min_dewp >  -22.70
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales <= 11.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales >  11.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months >  46.54
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 44.00
+|   |   |   |   |   |   |   |   |   |--- fea_mean_thunder <= 0.07
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months <= 74.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months >  74.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_thunder >  0.07
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_store_price_avg <= 2.33
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_store_price_avg >  2.33
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  44.00
+|   |   |   |   |   |   |   |   |   |--- fea_max_visib <= 67.70
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_6_months <= 5568.94
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_6_months >  5568.94
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |--- fea_max_visib >  67.70
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  3.89
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 157.00
+|   |   |   |   |   |   |   |--- value: [0.81]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  157.00
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 101.50
+|   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  101.50
+|   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  0.48
+|   |   |   |   |   |--- fea_avg_dept_num_days_item_is_zero_sales <= 13.95
+|   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.00
+|   |   |   |   |   |   |   |--- fea_price_pct_change_1m <= -0.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 4.13
+|   |   |   |   |   |   |   |   |   |--- value: [0.27]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  4.13
+|   |   |   |   |   |   |   |   |   |--- fea_item_daily_salesq50 <= 6.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 94.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  94.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_daily_salesq50 >  6.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_6_months <= 285.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_6_months >  285.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |--- fea_price_pct_change_1m >  -0.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 99.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_6_months <= 53799.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 28.77
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 32
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  28.77
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_6_months >  53799.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.70
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.70
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  99.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 29.80
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.66
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.66
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 22
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  29.80
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales <= 1.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales >  1.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.00
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 161.50
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 9395.41
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.54
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 2.95
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  2.95
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.54
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_num_days_item_is_zero_sales <= 7.93
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 30
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_num_days_item_is_zero_sales >  7.93
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 27
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  9395.41
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales <= 60.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_max_daily_sales <= 14.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_max_daily_sales >  14.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales >  60.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  161.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.67
+|   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.67
+|   |   |   |   |   |   |   |   |   |--- fea_std_temperature <= 12.72
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- fea_std_temperature >  12.72
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |--- fea_avg_dept_num_days_item_is_zero_sales >  13.95
+|   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.75
+|   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales <= 8880.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 145.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 2.96
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  2.96
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  145.50
+|   |   |   |   |   |   |   |   |   |--- value: [1.44]
+|   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales >  8880.00
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_6_months <= 275.59
+|   |   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_6_months >  275.59
+|   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales <= 61.29
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 2.59
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  2.59
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales >  61.29
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.72
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.75
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 4.47
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months <= 85910.70
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 21.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 3.26
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 18
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  3.26
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  21.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.54
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.54
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 33
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months >  85910.70
+|   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  4.47
+|   |   |   |   |   |   |   |   |--- fea_min_temperature <= -5.15
+|   |   |   |   |   |   |   |   |   |--- fea_mean_rain_drizzle <= 0.20
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_rain_drizzle >  0.20
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |--- fea_min_temperature >  -5.15
+|   |   |   |   |   |   |   |   |   |--- fea_std_visib <= 1.60
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |--- fea_std_visib >  1.60
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  4.48
+|   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 51.50
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 103.50
+|   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales <= 64.40
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months <= 84035.81
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales <= 77.50
+|   |   |   |   |   |   |   |   |   |--- fea_avg_dept_monthly_sales <= 48.55
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 18.07
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  18.07
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |   |   |   |   |--- fea_avg_dept_monthly_sales >  48.55
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 6.67
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 25
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  6.67
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales >  77.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_6_months <= 22045.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_6_months >  22045.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months >  84035.81
+|   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales <= 397.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales >  397.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales >  64.40
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 86.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months <= 18.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_6_months <= 2328.74
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_6_months >  2328.74
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months >  18.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_store_price_std <= 0.05
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 49.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 23
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  49.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- fea_item_store_price_std >  0.05
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 4.66
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.33]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  4.66
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  86.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 43.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  43.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_3_months <= 4480.15
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.17]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_3_months >  4480.15
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  103.50
+|   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 12.50
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months <= 24779.84
+|   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales <= 54.99
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 29.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_visib <= 9.31
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_visib >  9.31
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  29.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales >  54.99
+|   |   |   |   |   |   |   |   |   |--- fea_is_event_3m <= 16.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_is_event_3m >  16.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months >  24779.84
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 38.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= inf
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_prcp <= 41.89
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_prcp >  41.89
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  inf
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_count_12_months <= 10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_count_12_months >  10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  38.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 38.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  38.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 30.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  30.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  12.50
+|   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  51.50
+|   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales <= 1930.00
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 210.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 3.66
+|   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  3.66
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_6_months <= 78085.64
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 1.65
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.85
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  1.65
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_6_months >  78085.64
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months <= 14.33
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 66.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  66.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months >  14.33
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 99.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  99.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  210.50
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 0.13
+|   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  0.13
+|   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales >  1930.00
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months <= 52658.00
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.00
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 1.45
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 4963.45
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  4963.45
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months <= 98.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months >  98.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  1.45
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 62623.64
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 192.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  192.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  62623.64
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.00
+|   |   |   |   |   |   |   |   |--- fea_item_daily_salesq25 <= 4.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 5.30
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 6.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  6.65
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  5.30
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales <= 13.97
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales >  13.97
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 29
+|   |   |   |   |   |   |   |   |--- fea_item_daily_salesq25 >  4.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months >  52658.00
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months <= 17.27
+|   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months >  17.27
+|   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |--- fea_item_num_days_item_is_zero_sales >  13.50
+|   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 15.50
+|   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 10.93
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 5.75
+|   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales <= 6.96
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales <= 15.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 14.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.63
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_num_days_item_is_zero_sales <= 7.58
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_num_days_item_is_zero_sales >  7.58
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.63
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 1.40
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  1.40
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  14.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 73.80
+|   |   |   |   |   |   |   |   |   |   |--- fea_min_dewp <= -15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_min_dewp >  -15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.17]
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  73.80
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_monthly_sales >  15.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 19.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 9.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  9.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 11.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  11.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  19.00
+|   |   |   |   |   |   |   |   |   |--- fea_std_wdsp <= 3.83
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_std_wdsp >  3.83
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |--- fea_coeffvar_dept_num_days_item_is_zero_sales >  6.96
+|   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  5.75
+|   |   |   |   |   |   |--- value: [0.36]
+|   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  10.93
+|   |   |   |   |   |--- fea_coeff_variation_dept_monthly_sales <= 1.23
+|   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale <= 555.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 2.52
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 24.50
+|   |   |   |   |   |   |   |   |   |--- fea_dept_price_std <= 3.46
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 20.07
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  20.07
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- fea_dept_price_std >  3.46
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  18.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  24.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 36.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 32.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  32.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  36.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  2.52
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 16.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 23.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  8.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 23
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  23.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 5.24
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  5.24
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  16.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 7.02
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months <= 20.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months >  20.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  7.02
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales <= 29.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 23
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales >  29.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale >  555.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.35
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 1.07
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 37.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_snow_ice_pellets <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_snow_ice_pellets >  0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  37.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months <= 1794.47
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months >  1794.47
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  1.07
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 1.59
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 2.92
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  2.92
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  1.59
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_num_days_item_is_zero_sales <= 7.40
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_cat_num_days_item_is_zero_sales >  7.40
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.35
+|   |   |   |   |   |   |   |   |--- fea_price_pct_change_1m <= 0.05
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 1.02
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months <= 341.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months >  341.65
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 30
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  1.02
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 38
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.21
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- fea_price_pct_change_1m >  0.05
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_3_months <= 5434.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 5660.93
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  5660.93
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_3_months >  5434.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_std <= 0.22
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_std >  0.22
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |--- fea_coeff_variation_dept_monthly_sales >  1.23
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 13.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 5.27
+|   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  5.27
+|   |   |   |   |   |   |   |   |--- value: [0.43]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  13.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 4.04
+|   |   |   |   |   |   |   |   |--- fea_item_store_price_avg <= 2.37
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 10.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  10.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.17]
+|   |   |   |   |   |   |   |   |--- fea_item_store_price_avg >  2.37
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months <= 1157.27
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months >  1157.27
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  4.04
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months <= 16.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months >  16.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  15.50
+|   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 5.50
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 14.00
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales <= 0.59
+|   |   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale <= 808.00
+|   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale >  808.00
+|   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales >  0.59
+|   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  14.00
+|   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales <= 0.00
+|   |   |   |   |   |   |   |--- fea_dept_price_min <= 0.50
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months <= 13292.92
+|   |   |   |   |   |   |   |   |   |--- value: [0.31]
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months >  13292.92
+|   |   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |   |   |   |--- fea_dept_price_min >  0.50
+|   |   |   |   |   |   |   |   |--- value: [0.37]
+|   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales >  0.00
+|   |   |   |   |   |   |   |--- fea_dept_price_std <= 2.83
+|   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |   |   |--- fea_dept_price_std >  2.83
+|   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  5.50
+|   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months <= 85359.12
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 2.50
+|   |   |   |   |   |   |   |--- fea_is_cultural_event_3m <= 1.50
+|   |   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |   |--- fea_is_cultural_event_3m >  1.50
+|   |   |   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  2.50
+|   |   |   |   |   |   |   |--- fea_avg_dept_monthly_sales <= 9.28
+|   |   |   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |   |   |   |   |--- fea_avg_dept_monthly_sales >  9.28
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales <= 12468.00
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.04
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 27
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.04
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.09
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 27
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales >  12468.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 147.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 3.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 24
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  3.41
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 27
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  147.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales <= 483.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales >  483.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months >  85359.12
+|   |   |   |   |   |   |--- value: [0.39]
+|--- fea_item_num_days_item_is_zero_sales >  21.50
+|   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 1.92
+|   |   |--- fea_item_vs_dept_price_ratio_min <= 2.74
+|   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_6_months <= 14862.86
+|   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 0.09
+|   |   |   |   |   |--- value: [1.79]
+|   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  0.09
+|   |   |   |   |   |--- value: [1.82]
+|   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_6_months >  14862.86
+|   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 2.52
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.10
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 1.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months <= 69.35
+|   |   |   |   |   |   |   |   |--- value: [0.34]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months >  69.35
+|   |   |   |   |   |   |   |   |--- fea_mean_gust <= 574.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.43]
+|   |   |   |   |   |   |   |   |--- fea_mean_gust >  574.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.43]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  1.50
+|   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale <= 16.50
+|   |   |   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale >  16.50
+|   |   |   |   |   |   |   |   |--- value: [0.61]
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.10
+|   |   |   |   |   |   |--- fea_dept_price_std <= 5.23
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 2.90
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 1.38
+|   |   |   |   |   |   |   |   |   |--- fea_item_max_daily_sales <= 2.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 1941.07
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  1941.07
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.31]
+|   |   |   |   |   |   |   |   |   |--- fea_item_max_daily_sales >  2.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 27.59
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  27.59
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  1.38
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 3.67
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months <= 15420.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months >  15420.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  3.67
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  2.90
+|   |   |   |   |   |   |   |   |--- fea_max_temperature <= 86.20
+|   |   |   |   |   |   |   |   |   |--- value: [0.40]
+|   |   |   |   |   |   |   |   |--- fea_max_temperature >  86.20
+|   |   |   |   |   |   |   |   |   |--- value: [0.30]
+|   |   |   |   |   |   |--- fea_dept_price_std >  5.23
+|   |   |   |   |   |   |   |--- fea_item_longevity_months <= 19.00
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months <= 346.01
+|   |   |   |   |   |   |   |   |   |--- value: [0.69]
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months >  346.01
+|   |   |   |   |   |   |   |   |   |--- value: [0.60]
+|   |   |   |   |   |   |   |--- fea_item_longevity_months >  19.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months <= 30.11
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales >  0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months >  30.11
+|   |   |   |   |   |   |   |   |   |--- fea_std_visib <= 1.63
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |   |--- fea_std_visib >  1.63
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  2.52
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 10.00
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 4308.71
+|   |   |   |   |   |   |   |--- value: [0.25]
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  4308.71
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 8.50
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.42]
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  8.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 13.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.48]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  13.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.46]
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  10.00
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 1.50
+|   |   |   |   |   |   |   |--- value: [0.93]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  1.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_count_12_months <= 7.50
+|   |   |   |   |   |   |   |   |--- value: [0.60]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_count_12_months >  7.50
+|   |   |   |   |   |   |   |   |--- value: [0.70]
+|   |   |--- fea_item_vs_dept_price_ratio_min >  2.74
+|   |   |   |--- fea_std_rain_drizzle <= 0.40
+|   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 1.66
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months <= 5.00
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 1.56
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales <= 0.90
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 19.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  19.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_temperature <= 95.85
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_temperature >  95.85
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales >  0.90
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months <= 652.68
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_3_months <= 10230.38
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_fog <= 0.27
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_fog >  0.27
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_3_months >  10230.38
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months >  652.68
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 3.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_dewp <= 12.66
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_dewp >  12.66
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  3.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  1.56
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 2.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 3.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 2.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.55]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  2.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.56]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  3.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales <= 17456.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.45]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales >  17456.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_min_dept_num_days_item_is_zero_sales <= 4.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.39]
+|   |   |   |   |   |   |   |   |   |   |--- fea_min_dept_num_days_item_is_zero_sales >  4.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.35]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  2.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.67
+|   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.67
+|   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months >  5.00
+|   |   |   |   |   |   |--- value: [1.38]
+|   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  1.66
+|   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months <= 25457.15
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 9.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 17.50
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 1309.88
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_3_months <= 13.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 5.58
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 26
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  5.58
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.72]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_3_months >  13.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 1.96
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  1.96
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  1309.88
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 1311.79
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.86]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  1311.79
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months <= 4.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months >  4.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  17.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 0.50
+|   |   |   |   |   |   |   |   |   |--- value: [2.03]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  0.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 40.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_cat_monthly_sales <= 415.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_cat_monthly_sales >  415.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  40.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_3_months <= 44.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.68]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_3_months >  44.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.58]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  9.50
+|   |   |   |   |   |   |   |--- value: [1.09]
+|   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months >  25457.15
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 8.50
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 15.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 6.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 29.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 19.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  19.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  29.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 2762.92
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  2762.92
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  6.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.59]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  15.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 2.94
+|   |   |   |   |   |   |   |   |   |--- fea_dept_price_max <= 24.35
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale <= 865.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.49]
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale >  865.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |   |   |   |--- fea_dept_price_max >  24.35
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.08
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.72]
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.08
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.72]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  2.94
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 17.65
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  17.65
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_count_12_months <= 10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_count_12_months >  10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  8.50
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 2294.68
+|   |   |   |   |   |   |   |   |--- value: [0.48]
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  2294.68
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 0.81
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales <= 31065.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales >  31065.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.30]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  0.81
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.37]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 12.86
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  12.86
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |--- fea_std_rain_drizzle >  0.40
+|   |   |   |   |--- fea_sum_cat_monthly_sales_roll_min_3_months <= 12513.50
+|   |   |   |   |   |--- fea_dept_max_days_since_last_sale <= 81.50
+|   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |   |--- fea_dept_max_days_since_last_sale >  81.50
+|   |   |   |   |   |   |--- value: [0.68]
+|   |   |   |   |--- fea_sum_cat_monthly_sales_roll_min_3_months >  12513.50
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 1.55
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.10
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 17.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 7.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.42
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 2.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  2.38
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.42
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.42
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.49]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.42
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  7.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 1.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales <= 207.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.63]
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales >  207.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  1.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  17.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months <= 2.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.94]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_9_months >  2.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 10.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= inf
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  inf
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  10.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 36.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  36.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.10
+|   |   |   |   |   |   |   |--- fea_item_longevity_months <= 16.00
+|   |   |   |   |   |   |   |   |--- value: [1.10]
+|   |   |   |   |   |   |   |--- fea_item_longevity_months >  16.00
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 5.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_3_months <= 1301.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  5.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_3_months >  1301.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.27]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  17.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.27]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  5.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 22.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_3_months <= 893.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_3_months >  893.62
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  22.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.84]
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  1.55
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months <= 0.83
+|   |   |   |   |   |   |   |--- value: [0.70]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months >  0.83
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 2.38
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 2.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.77
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.77
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  2.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 1670.63
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 4.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  4.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  1670.63
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months <= 2.73
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months >  2.73
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  2.38
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 1.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 7.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  7.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.52]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  1.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_max_daily_sales <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months <= 62523.33
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_12_months >  62523.33
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.32]
+|   |   |   |   |   |   |   |   |   |--- fea_item_max_daily_sales >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  1.92
+|   |   |--- fea_sum_cat_monthly_sales_roll_min_12_months <= 19244.50
+|   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 7.50
+|   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 6.50
+|   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 7.96
+|   |   |   |   |   |   |--- fea_avg_dept_num_days_item_is_zero_sales <= 16.84
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 0.59
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 2.45
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_min_6_months <= 14334.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.91]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_min_6_months >  14334.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.67]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  2.45
+|   |   |   |   |   |   |   |   |   |--- value: [0.42]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  0.59
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 4.36
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.41
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.41
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  4.36
+|   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |--- fea_avg_dept_num_days_item_is_zero_sales >  16.84
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_3_months <= 17211.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months <= 2.22
+|   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales <= 13.81
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales <= 8.91
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales >  8.91
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_stddev_dept_monthly_sales >  13.81
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_12_months >  2.22
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 4.86
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.01
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  4.86
+|   |   |   |   |   |   |   |   |   |   |--- fea_is_sporting_event_3m <= 1.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_is_sporting_event_3m >  1.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_3_months >  17211.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 1.08
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales <= 70.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |   |   |   |   |--- fea_max_dept_monthly_sales >  70.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.30]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_days_since_last_saleq75 <= 12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_days_since_last_saleq75 >  12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  1.08
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 4.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  4.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_6_months >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 1278.86
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.64]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  1278.86
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  7.96
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales <= 0.83
+|   |   |   |   |   |   |   |--- value: [1.45]
+|   |   |   |   |   |   |--- fea_ratio_item_dept_max_num_days_item_is_zero_sales >  0.83
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months <= 24911.12
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 2842.51
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_store_price_max <= 6.95
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_store_price_max >  6.95
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  2842.51
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_3_months <= 5786.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_max_3_months >  5786.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months >  24911.12
+|   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 30.50
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_monthly_sales <= 0.24
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.69]
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_monthly_sales >  0.24
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.57]
+|   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  30.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months <= 661.72
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_3_months >  661.72
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  6.50
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 1.75
+|   |   |   |   |   |   |--- value: [2.90]
+|   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  1.75
+|   |   |   |   |   |   |--- fea_std_gust <= 488.46
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 5.71
+|   |   |   |   |   |   |   |   |--- fea_dept_price_std <= 5.22
+|   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- fea_dept_price_std >  5.22
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 3.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  3.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  5.71
+|   |   |   |   |   |   |   |   |--- value: [0.26]
+|   |   |   |   |   |   |--- fea_std_gust >  488.46
+|   |   |   |   |   |   |   |--- value: [0.57]
+|   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  7.50
+|   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 7.50
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months <= 26.00
+|   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 0.88
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.48
+|   |   |   |   |   |   |   |   |--- value: [0.81]
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.48
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 4.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  4.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  0.88
+|   |   |   |   |   |   |   |--- fea_std_thunder <= 0.22
+|   |   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale <= 5.50
+|   |   |   |   |   |   |   |   |   |--- fea_mean_fog <= 0.08
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |   |--- fea_mean_fog >  0.08
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.34]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale >  5.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months <= 13.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 2.37
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  2.37
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months >  13.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_1_months <= 6.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.57]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_1_months >  6.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |--- fea_std_thunder >  0.22
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 0.50
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 14388.86
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  14388.86
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.56]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  0.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 0.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.43]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  0.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales <= 24.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_num_days_item_is_zero_sales >  24.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |--- fea_item_monthly_sales_lag_3_months >  26.00
+|   |   |   |   |   |   |--- value: [2.51]
+|   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  7.50
+|   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.01
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 1.46
+|   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale <= 20.00
+|   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |   |   |   |--- fea_item_max_days_since_last_sale >  20.00
+|   |   |   |   |   |   |   |   |--- value: [0.46]
+|   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  1.46
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 1.46
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.26
+|   |   |   |   |   |   |   |   |   |--- fea_std_wdsp <= 3.37
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_3_months <= 802.25
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_3_months >  802.25
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_std_wdsp >  3.37
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.71]
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.26
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales <= 7189.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months <= 7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months >  7.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales >  7189.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.42]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  1.46
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales <= 2793.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 28.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  12.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  28.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.57]
+|   |   |   |   |   |   |   |   |--- fea_sum_dept_num_days_item_is_zero_sales >  2793.50
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales <= 20.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_7_months >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 25
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales >  20.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 0.34
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  0.34
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.01
+|   |   |   |   |   |   |--- value: [0.51]
+|   |   |--- fea_sum_cat_monthly_sales_roll_min_12_months >  19244.50
+|   |   |   |--- fea_item_monthly_sales_roll_min_12_months <= 3.50
+|   |   |   |   |--- fea_item_monthly_sales_lag_12_months <= 79.50
+|   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 2.23
+|   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale <= 344.50
+|   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months <= 19169.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months <= 15.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months <= 8.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months <= 3588.89
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 16
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months >  3588.89
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.34]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_6_months >  8.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_visib <= 9.37
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_visib >  9.37
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_4_months >  15.00
+|   |   |   |   |   |   |   |   |   |--- fea_avg_cat_num_days_item_is_zero_sales <= 15.46
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |--- fea_avg_cat_num_days_item_is_zero_sales >  15.46
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.92]
+|   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_12_months >  19169.50
+|   |   |   |   |   |   |   |   |--- value: [0.81]
+|   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale >  344.50
+|   |   |   |   |   |   |   |--- fea_item_max_daily_sales <= 8.50
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months <= 81817.38
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months <= 5177.36
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 52.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  52.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_avg_6_months >  5177.36
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 1.39
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.28]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  1.39
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 25
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months >  81817.38
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months <= 17.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.88
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_10_months >  17.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |--- fea_item_max_daily_sales >  8.50
+|   |   |   |   |   |   |   |   |--- value: [0.37]
+|   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  2.23
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_6_months <= 4417.00
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months <= 3.38
+|   |   |   |   |   |   |   |   |--- value: [0.53]
+|   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_3_months >  3.38
+|   |   |   |   |   |   |   |   |--- value: [0.38]
+|   |   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_min_6_months >  4417.00
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months <= 3357.33
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales <= 0.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months <= 2.29
+|   |   |   |   |   |   |   |   |   |   |--- fea_is_event_3m <= 16.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_is_event_3m >  16.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_2_months >  2.29
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 4.10
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  4.10
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales >  0.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.35]
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_std_12_months >  3357.33
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min <= 6.06
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months <= 3.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeff_variation_dept_monthly_sales <= 1.05
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.45]
+|   |   |   |   |   |   |   |   |   |   |--- fea_coeff_variation_dept_monthly_sales >  1.05
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.54]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_min_3_months >  3.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.27]
+|   |   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_min >  6.06
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months <= 2.78
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months <= 77239.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_12_months >  77239.12
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_12_months >  2.78
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_visib <= 1.75
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.56]
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_visib >  1.75
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |--- fea_item_monthly_sales_lag_12_months >  79.50
+|   |   |   |   |   |--- value: [0.42]
+|   |   |   |--- fea_item_monthly_sales_roll_min_12_months >  3.50
+|   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales <= 0.01
+|   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months <= 1194.99
+|   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales <= 0.00
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_6_months <= 89693.50
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 0.71
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 1.69
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_fog <= 0.04
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_fog >  0.04
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  1.69
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_daily_salesq75 <= 0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_daily_salesq75 >  0.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.35]
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  0.71
+|   |   |   |   |   |   |   |   |   |--- fea_std_temperature <= 12.31
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 1.73
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  1.73
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |--- fea_std_temperature >  12.31
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_wdsp <= 6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_mean_wdsp >  6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_max_6_months >  89693.50
+|   |   |   |   |   |   |   |   |--- value: [0.45]
+|   |   |   |   |   |   |--- fea_ratio_item_dept_sum_monthly_sales >  0.00
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_monthly_sales <= 0.11
+|   |   |   |   |   |   |   |   |--- value: [0.37]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_monthly_sales >  0.11
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales <= 12341.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months <= 28.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months <= 56.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_longevity_months >  56.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_2_months >  28.00
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 10.22
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  10.22
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales >  12341.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months <= 12.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months <= 2.43
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months >  2.43
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_max_12_months >  12.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months <= 6.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_avg_6_months >  6.14
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 20
+|   |   |   |   |   |--- fea_sum_dept_monthly_sales_roll_std_12_months >  1194.99
+|   |   |   |   |   |   |--- fea_item_longevity_months <= 8.50
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales <= 22.50
+|   |   |   |   |   |   |   |   |--- value: [0.50]
+|   |   |   |   |   |   |   |--- fea_ratio_item_dept_min_num_days_item_is_zero_sales >  22.50
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales <= 0.05
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 3.72
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_wdsp <= 3.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- fea_std_wdsp >  3.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  3.72
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales <= 12632.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- fea_sum_cat_num_days_item_is_zero_sales >  12632.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_max_monthly_sales >  0.05
+|   |   |   |   |   |   |   |   |   |--- value: [0.29]
+|   |   |   |   |   |   |--- fea_item_longevity_months >  8.50
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 1.90
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months <= 3.06
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months <= 30.45
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months <= 3.81
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 23
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_3_months >  3.81
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_3_months >  30.45
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months <= 30.11
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_6_months >  30.11
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_coeffvar_6_months >  3.06
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales <= 1.92
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale <= 928.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 21
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_max_days_since_last_sale >  928.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |--- fea_ratio_item_dept_avg_num_days_item_is_zero_sales >  1.92
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_5_months >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 19
+|   |   |   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  1.90
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months <= 26.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months <= 2.87
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_daily_salesq75 <= 2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- fea_dept_daily_salesq75 >  2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.17]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_roll_std_12_months >  2.87
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months <= 0.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_11_months >  0.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_8_months >  26.00
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months <= 23.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months <= 0.73
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_ratio_lag_1_months >  0.73
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |   |   |   |--- fea_item_monthly_sales_lag_11_months >  23.50
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_days_since_last_saleq75 <= 12.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |   |   |--- fea_item_days_since_last_saleq75 >  12.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |--- fea_ratio_item_dept_sum_num_days_item_is_zero_sales >  0.01
+|   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg <= 1.53
+|   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months <= 80388.00
+|   |   |   |   |   |   |   |--- value: [0.35]
+|   |   |   |   |   |   |--- fea_sum_cat_monthly_sales_roll_avg_3_months >  80388.00
+|   |   |   |   |   |   |   |--- value: [0.31]
+|   |   |   |   |   |--- fea_item_vs_dept_price_ratio_avg >  1.53
+|   |   |   |   |   |   |--- value: [0.25]

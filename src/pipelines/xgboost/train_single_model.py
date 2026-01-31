@@ -8,12 +8,14 @@ from src.core.transformations.transformations import apply_log_normal_transforma
 from src.core.clients.bigquery import BigQueryClient
 from src.core.config_loader import ConfigLoader
 from src.core.models.xgboost import XgboostModel
+from typing import Optional
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def main(features=["fea_dept_number"]):
+def main(features=["fea_dept_number"], loaded_df:Optional[pd.DataFrame] = None):
     """Main function for XGBoost training."""
 
     # Log Model Training
@@ -34,10 +36,11 @@ def main(features=["fea_dept_number"]):
     training_fields = ",".join(config_loader.required_fields + features)
 
     # Extract training dataframe.
-    loaded_df = bq_client.load_training_table(
-        table_name=config_loader.training_table_name,
-        fields=training_fields
-    )
+    if loaded_df is None:
+        loaded_df = bq_client.load_training_table(
+            table_name=config_loader.training_table_name,
+            fields=training_fields
+        )
 
     # Filter Outliers
     logger.info(f"Filtering outliers ...")
