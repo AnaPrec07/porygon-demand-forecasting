@@ -87,6 +87,9 @@ class XgboostModel():
             """
         )
 
+        # Create directory
+        os.makedirs(self.run_directory, exist_ok=True)
+
         # Initialize model
         self.model = self.model(
             **self.model_params
@@ -249,7 +252,6 @@ class XgboostModel():
         """This function creates the directory for the model that was just trained"""
         self.models_directory_path = os.path.join(Path(__file__).parent.parent.parent, "artifacts", "models")
         self.run_directory = os.path.join(self.models_directory_path, self.model_name, datetime.now().strftime("%Y%m%d_%H%M%S"))
-        os.makedirs(self.run_directory, exist_ok=True)
     
 
     def _save_model(self, model_index: int = 0):
