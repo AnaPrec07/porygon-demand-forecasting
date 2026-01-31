@@ -47,6 +47,7 @@ def main(features=["fea_dept_number"], loaded_df:Optional[pd.DataFrame] = None):
     loaded_df = loaded_df[
         loaded_df[config_loader.target_col] < loaded_df[config_loader.target_col].quantile(config_loader.outlier_threshold)
     ]
+    print(f"This is outlier threshold = {loaded_df[config_loader.target_col].quantile(config_loader.outlier_threshold)}")
     
     # 01. Train model
     logger.info("Training model...")
