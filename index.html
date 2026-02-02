@@ -501,8 +501,6 @@
         <div class="logo">📊 Demand Forecasting</div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="data_collection_and_exploration.html">Exploratory Analysis (EDA)</a></li>
-            <li><a href="data_cleanning.html">Data Processing</a></li>
             <li><a href="https://sites.google.com/view/ana-preciado/home">About</a></li>
         </ul>
     </nav>
@@ -517,9 +515,9 @@
             </p>
             
             <div class="badges">
-                <span class="badge">Google Cloud</span>
-                <span class="badge">Demand Forecasting</span>
-                <span class="badge">Machine Learning</span>
+                <span class="badge">Google BigQuery</span>
+                <span class="badge">XGBoost Regressor</span>
+                <span class="badge">Google DataForm</span>
             </div>
 
             <div class="cta-buttons">
@@ -540,28 +538,28 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-value">30%</div>
-                    <div class="stat-label">Forecast Error Reduction (from 23% MdAPE to 16%)</div>
+                    <div class="stat-value">21%</div>
+                    <div class="stat-label">Forecast Error Reduction from Benchmark (from 23% to 18%)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">$21,421</div>
-                    <div class="stat-label">Net Profit Increase in 6 Months</div>
+                    <div class="stat-value">$50,106</div>
+                    <div class="stat-label">Net Profit from Inventory Cost Savings and Stockout Prevention.</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">97%</div>
-                    <div class="stat-label">Fill Rate Maintained in 6 months</div>
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">Fill Rate Maintained</div>
                 </div>
 
                 <div class="stat-card">
-                    <div class="stat-value">31%</div>
-                    <div class="stat-label">Reduction on stockout units</div>
+                    <div class="stat-value">39%</div>
+                    <div class="stat-label">Reduction in Stockout Units</div>
                 </div>
             </div>
         </div>
     </section>
     <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 1px;">
             <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 5px;margin-top: 25px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-            <strong>Note:</strong> The numbers above have portfolio illustrative purposes only and do <u>not</u> represent real financial or operational results.</p>
+            <strong>Note:</strong> The numbers above have portfolio illustrative purposes only and do <u>not</u> represent real financial or operational results. The numbers contemplate a time period of 9 months.</p>
     </section>
     <!-- Data Analysis Section -->
     <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
@@ -657,16 +655,14 @@
                     Solution's Objective
                 </h3>
                 <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-                    Walmart aims to increase net profit by reducing inventory holding costs and preventing stockout events. To achieve this, walmart must define and meet its optimal service level 
-                    based on its specific cost structure. A company's <strong>service level</strong> is the probability of meeting total monthly demand for a given item. Note that service level 
-                    is different from fill rate in that fill rate measures the percentage of total units demanded that are actually supplied from stock. 
-                    Service level focuses on the likelihood of avoiding stockouts altogether.
+                    Walmart aims to increase net profit by reducing inventory holding costs and preventing stockout events. To achieve this, walmart must define and meet its optimal service level. 
+                    A company's <strong>service level</strong> is the probability of meeting total monthly demand for a given item.
                 </p>
                 <div style="margin: 12px auto 12px auto; max-width: 1000px; border-radius: 4px; padding: 20px; font-size: 1.04rem; text-align: center; margin-top: 30px; margin-bottom: 40px;">
                         <span style="font-weight: 600;">Optimal Service Level Formula:</span><br>
                         <span style="font-family: monospace; font-size: 1.09rem;">SL = Cu / (Cu + Co)</span><br>
                         <span>where <strong>Cu</strong> is the stockout cost per unit and <strong>Co</strong> is the holding cost per unit.<br>
-                        Given the below parameters, Walmart's optimal service level is <strong>88%</strong></span>
+                        Given the below parameters, Walmart's optimal service level is <strong>78%</strong></span>
                 </div>
 
             <h4 style="font-size: 1.35rem; margin-top: 12px; margin-bottom: 6px; color: #667eea; font-weight: 700; text-align: center; letter-spacing: 0.3px;">Operational Parameters</h4>
@@ -674,11 +670,11 @@
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px 35px;">
                     <div style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
                         <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">Unit Cost</div>
-                        <div style="font-size: 1.1rem; font-weight: 700; color: #667eea;">10% of unit price</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #667eea;">20% of unit price</div>
                     </div>
                     <div style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
                         <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">Lead Time</div>
-                        <div style="font-size: 1.1rem; font-weight: 700; color: #667eea;">30 days</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #667eea;">90 days</div>
                     </div>
                     <div style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
                         <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">Reorder Fee</div>
@@ -690,112 +686,14 @@
                     </div>
                     <div style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
                         <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">Target Service Level</div>
-                        <div style="font-size: 1.1rem; font-weight: 700; color: #667eea;">88%</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #667eea;">78%</div>
                     </div>
                 </div>
             </div>
         <div style="margin: 36px auto 30px auto; max-width: 800px; text-align: center; font-size: 1.35rem; font-weight: 700; color: white; background: linear-gradient(90deg, #4285F4 0%, #667eea 100%); border-radius: 10px; padding: 22px 32px; box-shadow: 0 2px 12px rgba(67,160,71,0.07); letter-spacing: 0.2px;">
-            <span>This solution provides three-month forecasts for Walmart’s SKU-level demand and the required safety stock to maintain an 88% service level.</span>
+            <span>This solution provides three-month forecasts for Walmart’s SKU-level demand and the required safety stock to maintain an 78% service level. The benchmark is calculated as three times (x3) the item sales quantity for the current month. </span>
         </div>
 
-    </section>
-    <!-- Results Section -->
-    <section id="results" class="results" style="background: linear-gradient(135deg, #e9eeee 0%, #d4d3d9 100%); padding: 80px 0;">
-        <div class="container">
-            
-            <h2 class="section-title" style="margin-bottom: 40px">Results Achieved</h2>
-
-
-            <div style="max-width: 1100px; margin: 40px auto;">
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-                        <thead>
-                            <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Category</th>
-                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Metric</th>
-                                <th style="padding: 14px; text-align: center; font-weight: 600; font-size: 0.9rem;">Benchmark</th>
-                                <th style="padding: 14px; text-align: center; font-weight: 600; font-size: 0.9rem;">ML Solution</th>
-                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Interpretation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Demand Forecasting -->
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-weight: 700; color: #667eea;" rowspan="2">Demand Forecasting</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Median Absolute Percent Error</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">22.42%</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">16.93%</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better - forecast accuracy</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-size: 0.9rem;"> Median Absolute Error</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">19 units</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">15 units</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better - forecast accuracy</td>
-                            </tr>
-                            <!-- Service Level -->
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-weight: 700; color: #ff9800;" rowspan="3">Service Level</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Fill Rate</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">95.40%</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">97.19%</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better.</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Units Sold</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">553,304</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">561,096</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Stockouts</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">31,910 units</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">19,500 units</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
-                            </tr>
-                            <!-- Financial -->
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-weight: 700; color: #4caf50;" rowspan="5">Financial</td>
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Holding Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$40,043</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$40,565</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Cost of carrying inventory</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Order Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$200,215</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$202,824</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Unit cost of carried items</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Inventory Cost</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$240,258</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$243,389</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Sum of all inventory-related costs</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Total Profit Lost due to Stockout</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$68,728</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$44,177</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: #f8f9fa;">
-                                <td style="padding: 12px; font-size: 0.9rem;">Net Profit Generated</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600;">$1,307,244</td>
-                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$1,328,665</td>
-                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="placeholder.html" class="btn btn-primary">
-                        View Detailed Analysis →
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Model Details & Explainability Section -->
@@ -888,86 +786,39 @@
                             <h5 style="font-size: 1rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Key Data Preparation Steps:</h5>
                             <ul style="margin: 0; padding-left: 25px; line-height: 1.8; font-size: 0.9rem; color: var(--text-primary);">
                                 <li><strong>Stockout event detection and removal:</strong>  Identified and removed stockout events from sales data to improve forecast accuracy. Inventory stockouts introduce artificial zeros in the sales data. These zeros don't represent true demand, leading to biassed estimates.</li>
-                                    <ul style="margin: 0; padding-left: 25px; line-height: 1.8; font-size: 0.9rem; color: var(--text-primary);">
-                                    <li><strong>Step 1: </strong>Defined a stockout event as an SKU reaching <strong>20 or more consecutive days</strong> without sales.</li>
-                                    <li><strong>Step 2: </strong>Idetified and removed ~400 SKUs with a significantly higher number of stockout events than the rest of the items.</li>
-                                </ul>
-                                <li><strong>Focus on SKUs with at least three months of historical data:</strong> Removed observations where the SKU in scope didn't have at least three months of historical data. This helped the model perform better.</li>
-                                <li><strong>Filter outlier sales:</strong> Removed observations where the SKU in scope had sales values that were statistical outliers (above the 95th percentile).</li>
-                                <li><strong>Apply Log-Normal transformation to the sales distribution:</strong> The distribution of Walmart sales had a pareto shape. I trasnformed it to log-normal to enable the XGBoost algorithm used to perform better.</li>
+                                <li><strong>Focus on SKUs with at least three months of historical data:</strong> Removed observations where the SKU in scope didn't have at least three months of historical data to improve forecast accuracy.</li>
+                                <li><strong>Filter outlier sales:</strong> Removed observations where the SKU in scope had monthly sales above the 95th percentile.</li>
+                                <li><strong>Apply Log-Normal transformation to the sales distribution:</strong> The distribution sales has a pareto shape. I trasnformed it to log-normal to enable the XGBoost algorithm to perform better.</li>
                             </ul>
                         </div>
 
-                        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin: 0; font-style: italic;">
-                            To learn more about the data processing applied, visit the <a href="data_cleanning.html">data processgin</a> section.
-                        </a>
-                        </p>
                     </div>
                 </div>
-                <!-- Feature Engineering Summary -->
-                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e3eaf2 100%); padding: 40px 0 40px 0; border-radius: 16px; margin-bottom: 48px; box-shadow: 0 4px 24px rgba(102,126,234,0.08); border-top: 5px solid #667eea;">
-                    <div style="max-width: 900px; margin: 0 auto;">
-                        <h3 style="font-size: 2rem; margin-bottom: 18px; color: #667eea; font-weight: 800; letter-spacing: 0.5px;">
-                            Feature Engineering Highlights
-                        </h3>
-                        <p style="font-size: 1.08rem; color: #333; margin-bottom: 28px; background: #e8eaf6; border-radius: 8px; padding: 18px 24px; box-shadow: 0 1px 4px rgba(102,126,234,0.04);">
-                            I engineered <span style="color: #667eea; font-weight: 700;">800+ features</span> to capture the full complexity of Walmart's retail demand. These provide the algorithm with information on price, weather, calendar events, historical sales patterns, and more. 
-                            The final model uses only <span style="color: #667eea; font-weight: 700;">96</span> features. I selected these features for their <span style="color: #667eea; font-weight: 700;">predictive power, explainability and domain relevance.</span>
-                        </p>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-                            <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
-                                <div>
-                                    <strong>Sales:</strong> Walmart SKU sales at the item, department, store, state and country levels. These features look at patterns in daily dales, monthly sales and historical averages and standard deviations of these values.
-                                    These features have the most predictive relevance for the algorithm.
-                                </div>
-                            </div>
-                            <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
-                                <div>
-                                    <strong>Intermittency:</strong> Features capturing SKU sales intermittency and gaps in sales history. These features help the model understand the nature of the observed purchasing patterns for the specificic SKU. 
-                                    Note that since stockout periods were removed from the training data, this intermittency focuses on true demand patterns instead of inventory constraints.
-                                </div>
-                            </div>
-                            <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
-                                <div>
-                                    <strong>Pricing:</strong> These features look at price changes at the SKU, department and store levels. Price changes are a key driver of demand in retail, so these features help the model capture price elasticity effects.
-                                </div>
-                            </div>
-                            <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
-                                <div>
-                                    <strong>Weather:</strong> These features capture weather information for the state of California. They include temperature, precipitation, snow, windspeed, among others. Weather can significantly impact retail demand, especially for seasonal items.
-                                </div>
-                            </div>
-                            <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
-                                <div>
-                                    <strong>Calendar:</strong> Features that indicate the model about important calendar events throughout the year. This includes holidays, sporting events, cultural events, number of weekend days in the months, among others.
-                                </div>
-                            </div>
-                               <div style="background: white; border-radius: 10px; padding: 22px 20px 18px 20px; box-shadow: 0 2px 8px rgba(102,126,234,0.06); border-left: 4px solid #667eea; display: flex; align-items: flex-start; gap: 14px;">
-                                <div>
-                                    <strong>Other:</strong> This includes economic indicator features such as gas prices, correlations with the sales of specific departments within wallmart, features indicating SKU autocorrelations with historical sales, among others.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+  
                 <!-- Model Training & Validation Summary -->
                 <div style="background: #f8f9fa; padding: 35px; border-radius: 12px; margin-bottom: 40px; border-top: 4px solid #667eea;">
                     <h3 style="font-size: 1.6rem; margin-bottom: 25px; color: #667eea;">
-                        Model Training & Validation
+                        Model Details
                     </h3>
                     <div style="background: white; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea;margin-bottom: 24px;">
-                        <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Training and Validating</h4>
+                        <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Training Parameters</h4>
                         <ul style="margin: 0; padding-left: 20px; line-height: 1.7; font-size: 0.85rem;">
                             <li><strong>Target:</strong> Sum of SKU-store units sold in the next 3 months.</li>
-                            <li><strong>Models:</strong> 
+                            <li><strong>Models:</strong> The solution uses two models. One for accuracy and one for safety stock predictions.
                                 <ul style="margin: 0; padding-left: 25px; line-height: 1.7; font-size: 0.85rem;">
                                 <li>XGBoost with quantial error objective at the 50% percentile to predict sales per SKU-Store Sales.</li>
                                 <li>XGBoost with quantial error objective at the 80% percentile to predict SKU-Store required safety stock at the 88% service level.</li>
                                 </ul>
                             <li><strong>Training Window:</strong> From Jan 2011 to Dec 2014.</li>
-                            <li><strong>Validation Window:</strong> April 2015 to Sept 2015.</li>
+                            <li><strong>Validation Window:</strong> April 2015 to Dec 2015.</li>
                         </ul>
+                    </div>
+                    <div style="background: white; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea;margin-bottom: 24px;">
+                        <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Feature Engineering</h4>
+                        <p style="font-size: 0.85rem; color: #333; margin-bottom: 28px; background: #e8eaf6; border-radius: 8px; padding: 18px 24px; box-shadow: 0 1px 4px rgba(102,126,234,0.04);">
+                            I engineered <span style="color: #667eea; font-weight: 700;">800+ features</span> to capture the full complexity of Walmart's retail demand. These provide the algorithm with information on price, weather, calendar events, historical sales patterns, and more. 
+                            The final model uses only <span style="color: #667eea; font-weight: 700;">93</span> features. I selected these features for their <span style="color: #667eea; font-weight: 700;">predictive power and stability over time.</span>
+                        </p>
                     </div>
                 </div>
 
@@ -976,113 +827,187 @@
                     <h3 style="font-size: 1.6rem; margin-bottom: 25px; color: #667eea;">
                         Feature Importance
                     </h3>
-                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 40px;">
-                            Hand selected a total of <strong>96</strong> features for the final model. The breakdown of feature importance per category is as follows:
-                    </p>
                     <div style="margin-bottom: 30px;">
-                        <div style="background: white; padding: 25px; border-radius: 8px; border-left: 3px solid #667eea;">
+                        <div style="background: white; padding: 25px; border-radius: 8px; border-left: 3px solid #667eea; margin-bottom: 30px;">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Accuracy Model</h4>
                             <div style="display: flex; flex-direction: column; gap: 10px;">
                                 <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">1. Item-Level Sales</div>
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">1. Sales History & Seasonality</div>
                                     <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
                                         <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 41%; height: 100%;"></div>
                                     </div>
-                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">41%</div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">40%</div>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">2. Store/State/Dept/Category Sales</div>
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">2. Events</div>
                                     <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
                                         <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 25%; height: 100%;"></div>
                                     </div>
-                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">25%</div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">32%</div>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">3. Price & Ratio</div>
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">3. SNAP Date Sales</div>
                                     <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
                                         <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 13%; height: 100%;"></div>
                                     </div>
                                     <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">13%</div>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">4. Weather</div>
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">4. SKU Pricing</div>
                                     <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
                                         <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 10%; height: 100%;"></div>
                                     </div>
-                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">10%</div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">11%</div>
                                 </div>
                                   <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">5. Sales Intermittency</div>
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">5. Sales Gaps and Intermittency</div>
                                     <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
                                         <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 5%; height: 100%;"></div>
                                     </div>
-                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">5%</div>
-                                </div>
-                                  <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">6. Macroeconomic Indicators</div>
-                                    <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
-                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 2%; height: 100%;"></div>
-                                    </div>
                                     <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">2%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <div style="background: white; padding: 25px; border-radius: 8px; border-left: 3px solid #667eea;">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Safety Stock Model</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">1. Sales History & Seasonality</div>
+                                    <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
+                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 41%; height: 100%;"></div>
+                                    </div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">40%</div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">2. Events</div>
+                                    <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
+                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 25%; height: 100%;"></div>
+                                    </div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">30%</div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">3. SNAP Date Sales</div>
+                                    <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
+                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 13%; height: 100%;"></div>
+                                    </div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">13%</div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">4. SKU Pricing</div>
+                                    <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
+                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 10%; height: 100%;"></div>
+                                    </div>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">12%</div>
                                 </div>
                                   <div style="display: flex; align-items: center; gap: 15px;">
-                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">4. Item and Department Identifiers</div>
+                                    <div style="min-width: 320px; font-size: 0.85rem; color: var(--text-primary); font-family: 'Courier New', monospace;">5. Sales Gaps and Intermittency</div>
                                     <div style="flex: 1; background: #f0f0f0; border-radius: 4px; overflow: hidden; height: 20px;">
-                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 1%; height: 100%;"></div>
+                                        <div style="background: linear-gradient(90deg, #667eea, #764ba2); width: 5%; height: 100%;"></div>
                                     </div>
-                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">1%</div>
-                                </div>
-                            </div>
-                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin: 0; font-style: italic; margin-top:30px">
-                                    As is often the case, first party data delivered the strongest predictive value. The features chosen for the model's final version are simple, traceable and easy to understand.
-                                </p>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 30px;">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--text-primary); font-weight: 600;">SHAP Value Analysis</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 15px;">
-                            Beyond global feature importance, SHAP (SHapley Additive exPlanations) provides instance-level explanations showing how each feature contributes to individual predictions:
-                        </p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px;">
-                            <div style="background: white; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea;">
-                                <h5 style="font-size: 1rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">SHAP Benefits</h5>
-                                <ul style="margin: 0; padding-left: 20px; line-height: 1.7; font-size: 0.85rem;">
-                                    <li>Identifies positive vs. negative feature contributions</li>
-                                    <li>Reveals interaction effects between features</li>
-                                    <li>Provides business stakeholder transparency</li>
-                                </ul>
-                            </div>
-                            <div style="background: white; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea;">
-                                <h5 style="font-size: 1rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Key Findings</h5>
-                                <ul style="margin: 0; padding-left: 20px; line-height: 1.7; font-size: 0.85rem;">
-                                    <li>Price increases typically reduce demand by 5-15%</li>
-                                    <li>Weekend days show 20-30% higher demand for most items</li>
-                                    <li>SNAP days (1st & 15th) boost food sales 10-25%</li>
-                                    <li>Holiday effects vary significantly by product category</li>
-                                </ul>
+                                    <div style="min-width: 60px; text-align: right; font-weight: 700; color: #667eea; font-size: 0.9rem;">3%</div>
                             </div>
                         </div>
-
-                        <!-- SHAP Visualizations Grid -->
-                                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; margin: 36px 0;">
-                                                    <div style="text-align: center;">
-                                                        <img src="images/shap_feature_monthly_sales.png" alt="Feature 1 SHAP" style="max-width: 98%; min-width: 320px; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
-                                                        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">Feature Value vs SHAP Value</div>
-                                                    </div>
-                                                    <div style="text-align: center;">
-                                                        <img src="images/shap_fea_month_difference.png" alt="Feature 2 SHAP" style="max-width: 98%; min-width: 320px; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
-                                                        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">Feature Value vs Prediction (log scale)</div>
-                                                    </div>
-                                                    <div style="text-align: center;">
-                                                        <img src="images/shap_fea_price_pct_change_1m.png" alt="Feature 3 SHAP" style="max-width: 98%; min-width: 320px; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
-                                                        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">Feature Value vs MdAPE (log scale)</div>
-                                                    </div>
-                                                    <div style="text-align: center;">
-                                                        <img src="images/shap_mean_temperature_roll_avg_6_months.png" alt="Feature 4 SHAP" style="max-width: 98%; min-width: 320px; border-radius: 18px; box-shadow: 0 6px 24px rgba(102,126,234,0.13);">
-                                                        <div style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 12px;">Feature Value vs Error</div>
-                                                    </div>
-                                                </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results" style="background:  #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            
+            <h2 class="section-title" style="margin-bottom: 40px">Results Achieved</h2>
+
+
+            <div style="max-width: 1100px; margin: 40px auto;">
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Category</th>
+                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Metric</th>
+                                <th style="padding: 14px; text-align: center; font-weight: 600; font-size: 0.9rem;">Benchmark</th>
+                                <th style="padding: 14px; text-align: center; font-weight: 600; font-size: 0.9rem;">ML Solution</th>
+                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Interpretation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Demand Forecasting -->
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-weight: 700; color: #667eea;" rowspan="2">Demand Forecasting</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Median Absolute Percent Error</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">23.40%</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">18.75%</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;"> Median Absolute Error</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">16 units</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">13 units</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <!-- Service Level -->
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-weight: 700; color: #ff9800;" rowspan="3">Service Level</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Fill Rate</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">93%%</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">95%</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Units Sold</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">514,046</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">528,791</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Total Stockouts</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">37,450 units</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">22,705 units</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <!-- Financial -->
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-weight: 700; color: #4caf50;" rowspan="5">Financial</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Total Holding Cost</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$69,945</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$69,121</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Total Unit Cost</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$349,723</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$345,606</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Total Inventory Cost</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$419,668</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$414,727</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Total Stockout Opportunity Cost</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$112,987</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$67,822</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
+                                <td style="padding: 12px; font-size: 0.9rem;">Net Profit Generated</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600;">$1,085,951</td>
+                                <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$1,136,057</td>
+                                <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="src/notebooks/inventory_simulation/predction_inventory.csv" download="prediction_inventory.csv" class="btn btn-primary">
+                        Download Simulation Rresults
+                    </a>
                 </div>
             </div>
         </div>
@@ -1173,3 +1098,4 @@
     </script>
 </body>
 </html>
+f
