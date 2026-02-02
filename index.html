@@ -511,7 +511,7 @@
         <div class="container">
             <h1>ML-Driven Demand<br>Forecasting Solution</h1>
             <p class="tagline">
-                This portfolio project demonstrates how to develop and deploy an XGBoost solution to forecast retail sales across multiple product categories using real Walmart data.
+                This portfolio project showcases a solution to forecast Walmart retail sales across multiple product categories using XGBoost.
             </p>
             
             <div class="badges">
@@ -522,11 +522,11 @@
 
             <div class="cta-buttons">
                 <a href="https://github.com/AnaPrec07/porygon-demand-forecasting-dataform" class="btn btn-primary">
-                    <span>GitHub for ETL</span>
+                    <span>Data Engineering GitHub Repo</span>
                     <span>→</span>
                 </a>
                 <a href="https://github.com/AnaPrec07/porygon-demand-forecasting" class="btn btn-primary">
-                    <span>GitHub for ML</span>
+                    <span>Machine Learning GitHub Repo</span>
                     <span>→</span>
                 </a>
             </div>
@@ -539,11 +539,11 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-value">21%</div>
-                    <div class="stat-label">Forecast Error Reduction from Benchmark (from 23% to 18%)</div>
+                    <div class="stat-label">Forecast Error Reduction (from 23% to 18%)</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">$50,106</div>
-                    <div class="stat-label">Net Profit from Inventory Cost Savings and Stockout Prevention.</div>
+                    <div class="stat-label">Net Profit Increase</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">95%</div>
@@ -559,7 +559,7 @@
     </section>
     <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 1px;">
             <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 5px;margin-top: 25px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-            <strong>Note:</strong> The numbers above have portfolio illustrative purposes only and do <u>not</u> represent real financial or operational results. The numbers contemplate a time period of 9 months.</p>
+            <strong>Note:</strong> The numbers above have portfolio illustrative purposes only and do <u>not</u> represent real financial or operational results. Metrics calculated over a period of 9 months, using SKUs without stockouts or outlier sales and with at least three months of historical sales.</p>
     </section>
     <!-- Data Analysis Section -->
     <section id="data-analysis" class="data-analysis" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
@@ -691,7 +691,7 @@
                 </div>
             </div>
         <div style="margin: 36px auto 30px auto; max-width: 800px; text-align: center; font-size: 1.35rem; font-weight: 700; color: white; background: linear-gradient(90deg, #4285F4 0%, #667eea 100%); border-radius: 10px; padding: 22px 32px; box-shadow: 0 2px 12px rgba(67,160,71,0.07); letter-spacing: 0.2px;">
-            <span>This solution provides three-month forecasts for Walmart’s SKU-level demand and the required safety stock to maintain an 78% service level. The benchmark is calculated as three times (x3) the item sales quantity for the current month. </span>
+            <span>This solution provides two forecast: one for Walmart's SKU level demand in the next three months and a another for the requried safety stock to maintain a 78% service level.</span>
         </div>
 
     </section>
@@ -701,7 +701,7 @@
         <div class="container">
             <h2 class="section-title">Model Development and Explainability</h2>
             <p class="section-subtitle">
-                This section details key highlights on techniques used for data processing, feature engineering, model training, and explainability. Please click on the phases of the phaes below for more details.
+                This section details key highlights on techniques used for data processing, feature engineering, model training and evaluation.
             </p>
 
             <!-- ML Lifecycle Overview -->
@@ -780,7 +780,7 @@
                         
                         <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 20px;">
                             <b>Loaded</b> raw Walmart sales data into <b>BigQuery</b> via <b>GCP</b> External tables. Aggregated <b>daily</b> sales data into <b>monthly</b> values to a total of 
-                            <b>1,951,360</b> observations across <b>3,049</b> unique identifiers (store-SKU).
+                            <b>1,951,360</b> observations across <b>3,049</b> unique identifiers (SKUs).
 
                         <div style="background: #e8eaf6; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
                             <h5 style="font-size: 1rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Key Data Preparation Steps:</h5>
@@ -803,11 +803,11 @@
                     <div style="background: white; padding: 20px; border-radius: 8px; border-left: 3px solid #667eea;margin-bottom: 24px;">
                         <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Training Parameters</h4>
                         <ul style="margin: 0; padding-left: 20px; line-height: 1.7; font-size: 0.85rem;">
-                            <li><strong>Target:</strong> Sum of SKU-store units sold in the next 3 months.</li>
+                            <li><strong>Target:</strong> Sum of SKU units sold in the next 3 months.</li>
                             <li><strong>Models:</strong> The solution uses two models. One for accuracy and one for safety stock predictions.
                                 <ul style="margin: 0; padding-left: 25px; line-height: 1.7; font-size: 0.85rem;">
-                                <li>XGBoost with quantial error objective at the 50% percentile to predict sales per SKU-Store Sales.</li>
-                                <li>XGBoost with quantial error objective at the 80% percentile to predict SKU-Store required safety stock at the 88% service level.</li>
+                                <li>XGBoost with quantial error objective at the 50% percentile to predict sales per SKU.</li>
+                                <li>XGBoost with quantial error objective at the 80% percentile to predict safety stock required per SKU to maintain a 78% service level.</li>
                                 </ul>
                             <li><strong>Training Window:</strong> From Jan 2011 to Dec 2014.</li>
                             <li><strong>Validation Window:</strong> April 2015 to Dec 2015.</li>
@@ -817,7 +817,7 @@
                         <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: #667eea; font-weight: 600;">Feature Engineering</h4>
                         <p style="font-size: 0.85rem; color: #333; margin-bottom: 28px; background: #e8eaf6; border-radius: 8px; padding: 18px 24px; box-shadow: 0 1px 4px rgba(102,126,234,0.04);">
                             I engineered <span style="color: #667eea; font-weight: 700;">800+ features</span> to capture the full complexity of Walmart's retail demand. These provide the algorithm with information on price, weather, calendar events, historical sales patterns, and more. 
-                            The final model uses only <span style="color: #667eea; font-weight: 700;">93</span> features. I selected these features for their <span style="color: #667eea; font-weight: 700;">predictive power and stability over time.</span>
+                            The final models use only <span style="color: #667eea; font-weight: 700;">93</span> features. I selected these features for their <span style="color: #667eea; font-weight: 700;">predictive power and stability over time.</span>
                         </p>
                     </div>
                 </div>
@@ -919,6 +919,10 @@
         <div class="container">
             
             <h2 class="section-title" style="margin-bottom: 40px">Results Achieved</h2>
+            <p style="text-align: center; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                The table below shows the results achieved with the solution. Safety Stock Model metrics are calculated using only SKUs that did not have stockouts or outliers at any point from April 2015 to December 2015.
+                Target is sum of sales in the next three montsh per SKU. The benchmark is as the last observed monthly sales per SKU multiplied by three.
+            </p>
 
 
             <div style="max-width: 1100px; margin: 40px auto;">
@@ -928,6 +932,7 @@
                             <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                                 <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Category</th>
                                 <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Metric</th>
+                                <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Model</th>
                                 <th style="padding: 14px; text-align: center; font-weight: 600; font-size: 0.9rem;">Benchmark</th>
                                 <th style="padding: 14px; text-align: center; font-weight: 600; font-size: 0.9rem;">ML Solution</th>
                                 <th style="padding: 14px; text-align: left; font-weight: 600; font-size: 0.9rem;">Interpretation</th>
@@ -938,12 +943,14 @@
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-weight: 700; color: #667eea;" rowspan="2">Demand Forecasting</td>
                                 <td style="padding: 12px; font-size: 0.9rem;">Median Absolute Percent Error</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Accuracy Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">23.40%</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">18.75%</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;"> Median Absolute Error</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Accuracy Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">16 units</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">13 units</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
@@ -952,18 +959,21 @@
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-weight: 700; color: #ff9800;" rowspan="3">Service Level</td>
                                 <td style="padding: 12px; font-size: 0.9rem;">Fill Rate</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">93%%</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">95%</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Units Sold</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">514,046</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">528,791</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Stockouts</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">37,450 units</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">22,705 units</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
@@ -972,30 +982,35 @@
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-weight: 700; color: #4caf50;" rowspan="5">Financial</td>
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Holding Cost</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">$69,945</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$69,121</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Unit Cost</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">$349,723</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$345,606</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Inventory Cost</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">$419,668</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$414,727</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Total Stockout Opportunity Cost</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">$112,987</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$67,822</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Lower is better</td>
                             </tr>
                             <tr style="border-bottom: 1px solid #e0e0e0; background: #fff;">
                                 <td style="padding: 12px; font-size: 0.9rem;">Net Profit Generated</td>
+                                <td style="padding: 12px; font-size: 0.9rem;">Safety Stock Model</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600;">$1,085,951</td>
                                 <td style="padding: 12px; text-align: center; font-weight: 600; color: #43a047;">$1,136,057</td>
                                 <td style="padding: 12px; font-size: 0.85rem; color: var(--text-secondary);">Higher is better</td>
@@ -1030,7 +1045,8 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="https://sites.google.com/view/ana-preciado/home">About</a></li>
-                        <li><a href="https://github.com/AnaPrec07/porygon-demand-forecasting">GitHub Repository</a></li>
+                        <li><a href="https://github.com/AnaPrec07/porygon-demand-forecasting">ML GitHub Repository</a></li>
+                        <li><a href="https://github.com/AnaPrec07/porygon-demand-forecasting-dataform">DE GitHub Repository</a></li>
                     </ul>
                 </div>
 
